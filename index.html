@@ -4,75 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>फत्तेपुर मण्डली - स्वागत छ</title>
+    <!-- Animate On Scroll (AOS) एनिमेसन लाइब्रेरीको CSS -->
+    <link href="https://unpkg.com" rel="stylesheet">
     <style>
-        /* व्यावसायिक CSS रिसेट */
+        /* प्रिमियम र स्मुथ स्क्रोलिङ इफेक्ट */
+        html { scroll-behavior: smooth; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f7fafc; color: #2d3748; line-height: 1.7; }
+        body { background-color: #f3f4f6; color: #1f2937; line-height: 1.7; overflow-x: hidden; }
         
-        /* हेडर र नेभिगेसन */
-        header { background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%); color: #fff; padding: 35px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 8px; color: #fbd38d; }
-        header p { font-size: 1.1rem; opacity: 0.9; font-style: italic; }
+        /* १. एनिमेटेड हेडर ब्याकग्राउन्ड */
+        header { 
+            background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #1d4ed8, #1e40af);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff; 
+            padding: 50px 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 10px; color: #fef08a; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        header p { font-size: 1.2rem; opacity: 0.95; font-style: italic; font-weight: 300; }
 
-        nav { background-color: #2d3748; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: center; }
+        /* २. प्रिमियम एनिमेटेड स्टिकी मेनु */
+        nav { background-color: rgba(31, 41, 55, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; justify-content: center; }
         nav .nav-container { max-width: 1200px; width: 100%; display: flex; justify-content: center; }
-        nav a { color: #edf2f7; padding: 15px 20px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.95rem; transition: all 0.3s ease; }
-        nav a:hover { color: #fbd38d; background-color: #4a5568; }
+        nav a { color: #f3f4f6; padding: 18px 25px; text-decoration: none; font-weight: 600; font-size: 1rem; position: relative; transition: color 0.3s ease; }
+        nav a::after { content: ''; position: absolute; width: 0; height: 3px; bottom: 10px; left: 50%; background-color: #fef08a; transition: all 0.3s ease; transform: translateX(-50%); }
+        nav a:hover { color: #fef08a; }
+        nav a:hover::after { width: 60%; }
 
-        /* मुख्य आकर्षण (Hero) */
-        .hero { background: #fff; text-align: center; padding: 80px 20px; border-bottom: 4px solid #fbd38d; }
-        .hero h2 { font-size: 2.2rem; color: #1a365d; margin-bottom: 15px; }
-        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; color: #4a5568; font-weight: 500; }
+        /* ३. हिरो सेक्सन */
+        .hero { background: #fff; text-align: center; padding: 100px 20px; border-bottom: 4px solid #fef08a; }
+        .hero h2 { font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.35rem; max-width: 800px; margin: 0 auto; color: #4b5563; font-weight: 500; }
 
-        /* कन्टेनर र सेक्सनहरू */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .section { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px; }
-        .section h2 { color: #1a365d; font-size: 1.8rem; margin-bottom: 25px; border-left: 5px solid #fbd38d; padding-left: 15px; }
+        /* कन्टेनर र सेक्सन कार्डहरू */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .section { background: #fff; padding: 50px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); margin-bottom: 50px; border: 1px solid rgba(0,0,0,0.02); }
+        .section h2 { color: #1e3a8a; font-size: 2rem; margin-bottom: 30px; border-left: 6px solid #3b82f6; padding-left: 18px; font-weight: 700; }
 
-        /* यूट्यूब सेक्सन (Responsive Video Container) */
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        /* ४. यूट्यूब उत्तरदायी कन्टेनर */
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+        .video-container:hover { transform: scale(1.01); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        /* चर्चका सेवाहरू ग्रिड (PC मा ३ वटा, मोबाइलमा १ वटा) */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .service-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .service-card img { width: 100%; height: 200px; object-fit: cover; background-color: #cbd5e0; }
-        .service-content { padding: 20px; }
-        .service-content h3 { color: #2b6cb0; margin-bottom: 10px; font-size: 1.3rem; }
-        .service-content p { color: #4a5568; font-size: 0.95rem; }
+        /* ५. चर्चका सेवाहरू कार्ड र एनिमेसन इफेक्ट */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
+        .service-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); position: relative; }
+        .service-card::after { content: ""; border-radius: 12px; position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.4s ease; }
+        .service-card:hover { transform: translateY(-8px); }
+        .service-card:hover::after { opacity: 1; }
+        .service-card img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.5s ease; }
+        .service-card:hover img { transform: scale(1.05); }
+        .service-content { padding: 25px; background: #fff; position: relative; z-index: 2; }
+        .service-content h3 { color: #1d4ed8; margin-bottom: 12px; font-size: 1.4rem; font-weight: 700; }
+        .service-content p { color: #4b5563; font-size: 1rem; }
 
-        /* सम्पर्क सेक्सन */
-        .contact-flex { display: flex; flex-wrap: wrap; gap: 40px; }
+        /* ६. सम्पर्क र प्रिमियम एनिमेटेड बटन */
+        .contact-flex { display: flex; flex-wrap: wrap; gap: 50px; }
         .contact-info { flex: 1; min-width: 280px; }
-        .contact-info p { margin-bottom: 15px; font-size: 1.05rem; }
-        .contact-form { flex: 1.5; min-width: 300px; background: #f7fafc; padding: 30px; border-radius: 6px; border: 1px solid #e2e8f0; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 1rem; }
-        .contact-form button { background-color: #1a365d; color: white; padding: 14px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: 600; width: 100%; }
-        .contact-form button:hover { background-color: #2a4365; }
+        .contact-info p { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+        .contact-form { flex: 1.5; min-width: 300px; background: #f9fafb; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 1rem; transition: all 0.3s ease; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: #3b82f6; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15); outline: none; }
+        .contact-form button { background-color: #1e3a8a; color: white; padding: 15px 30px; border: none; border-radius: 6px; cursor: pointer; font-size: 1.05rem; font-weight: 600; width: 100%; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2); }
+        .contact-form button:hover { background-color: #1d4ed8; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(30, 58, 138, 0.3); }
+        .contact-form button:active { transform: translateY(0); }
 
         /* फुटर */
-        footer { background-color: #1a365d; color: #fff; text-align: center; padding: 25px 20px; margin-top: 60px; }
+        footer { background-color: #111827; color: #9ca3af; text-align: center; padding: 35px 20px; margin-top: 80px; font-size: 1rem; }
+        footer p { color: #fff; margin-bottom: 5px; }
 
-        /* मोबाइल रेस्पोन्सिभ */
+        /* मोबाइल स्क्रिनका लागि रिस्पोन्सिभ लेआउट */
         @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            nav .nav-container { flex-direction: column; }
-            nav a { text-align: center; padding: 12px 10px; border-bottom: 1px solid #4a5568; }
-            .section { padding: 25px 15px; }
+            header h1 { font-size: 2.2rem; }
+            nav .nav-container { flex-direction: column; padding: 5px 0; }
+            nav a { text-align: center; padding: 12px 10px; font-size: 0.95rem; }
+            nav a::after { display: none; }
+            .section { padding: 30px 20px; }
             .contact-flex { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <!-- हेडर -->
+    <!-- १. एनिमेटेड हेडर सिफ्टिङ ब्याकग्राउन्डसहित -->
     <header>
-        <h1>फत्तेपुर मण्डली</h1>
-        <p>परमेश्वरलाई प्रेम गरौँ, मानिसहरूलाई प्रेम गरौँ, र चेलाहरू बनाऔँ।</p>
+        <h1 data-aos="fade-down" data-aos-duration="1000">फत्तेपुर मण्डली</h1>
+        <p data-aos="fade-up" data-aos-duration="1200">परमेश्वरलाई प्रेम गरौँ, मानिसहरूलाई प्रेम गरौँ, र चेलाहरू बनाऔँ।</p>
     </header>
 
-    <!-- मेनु बार -->
+    <!-- २. स्टिकी मेनु बार -->
     <nav>
         <div class="nav-container">
             <a href="#home">गृह पृष्ठ</a>
@@ -83,64 +110,43 @@
         </div>
     </nav>
 
-    <!-- स्वागत ब्यानर -->
+    <!-- ३. मुख्य आकर्षक ब्यानर (Hero Section) -->
     <div class="hero" id="home">
-        <h2>फत्तेपुर मण्डलीमा तपाईंलाई स्वागत छ</h2>
-        <p>"किनभने जहाँ दुई वा तीन जना मेरो नाममा भेला हुन्छन्, त्यहाँ म तिनीहरूका बीचमा हुन्छु।" <br>— मत्ती १८:२०</p>
+        <h2 data-aos="zoom-in" data-aos-duration="1000">फत्तेपुर मण्डलीमा तपाईंलाई स्वागत छ</h2>
+        <p data-aos="zoom-in" data-aos-duration="1200">"किनभने जहाँ दुई वा तीन जना मेरो नाममा भेला हुन्छन्, त्यहाँ म तिनीहरूका बीचमा हुन्छु।" <br>— मत्ती १८:२०</p>
     </div>
 
     <div class="container">
-        <!-- हाम्रो बारेमा सेक्सन -->
-        <div class="section" id="about">
+        <!-- ४. हाम्रो बारेमा सेक्सन (Fade-right एनिमेसन) -->
+        <div class="section" id="about" data-aos="fade-right" data-aos-duration="1000">
             <h2>हाम्रो बारेमा (About Us)</h2>
             <p>फत्तेपुर मण्डली परमेश्वरको बचन, आपसी प्रेम र सङ्गतिमा आधारित एउटा ख्रीष्टियन समुदाय हो। हाम्रो मुख्य उद्देश्य प्रभू येशू ख्रीष्टको सुसमाचार फैलाउनु, विश्वासीहरूलाई आत्मिक रूपमा बलियो बनाउनु र समाजमा सकारात्मक परिवर्तन ल्याउनु हो। हामी यहाँहरू सबैलाई प्रभूको न्यानो प्रेममा स्वागत गर्दछौँ।</p>
         </div>
 
-        <!-- यूट्यूब अटो-अपडेट सेक्सन -->
-        <div class="section" id="youtube-live">
+        <!-- ५. यूट्यूब भिडियो सेक्सन (Zoom-in एनिमेसन र अटो-अपडेट) -->
+        <div class="section" id="youtube-live" data-aos="zoom-in" data-aos-duration="1000">
             <h2>ताजा अपडेट (Latest Video from YouTube)</h2>
-            <p style="margin-bottom: 20px; color: #4a5568;">हाम्रो आधिकारिक यूट्यूब च्यानलबाट हालसालै अपलोड गरिएको भिडियो तल स्वतः हेर्न सक्नुहुन्छ:</p>
+            <p style="margin-bottom: 25px; color: #4b5563;">हाम्रो आधिकारिक यूट्यूब च्यानलबाट हालसालै अपलोड गरिएको नयाँ भिडियो स्वतः तल हेर्न सक्नुहुन्छ:</p>
             <div class="video-container">
-                <!-- यूट्यूब लाइभ/ताजा भिडियो इम्बेड कोड -->
+                <!-- यसले च्यानल @FattepurChurch को पछिल्लो भिडियो अटोमेटिक लोड गर्छ -->
                 <iframe src="https://youtube.com" allowfullscreen></iframe>
             </div>
         </div>
 
-        <!-- चर्चका सेवाहरू सेक्सन (५ वटा कार्डहरू फोटोसहित) -->
+        <!-- ६. ५ वटा चर्चका सेवाहरू (Fade-up एनिमेसन र होभर इफेक्टहरू) -->
         <div class="section" id="services">
             <h2>चर्चका सेवाहरू (Our Services)</h2>
             <div class="services-grid">
                 
                 <!-- १. आराधना संगति -->
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://unsplash.com" alt="आराधना संगति">
                     <div class="service-content">
-                        <h3>आराधान सङ्गति</h3>
-                        <p><strong>समय:</strong> प्रत्येक शनिबार बिहान १०:०० बजे देखि</p>
-                        <p style="margin-top: 5px;">सम्पूर्ण मण्डली एकसाथ भेला भई सङ्गति, महिमा, आराधना र परमेश्वरको जीवित बचन सुन्ने मुख्य समय।</p>
+                        <h3>आराधना सङ्गति</h3>
+                        <p style="color: #ea580c; font-weight: 600; margin-bottom: 5px;">📍 प्रत्येक शनिबार बिहान १०:०० बजे</p>
+                        <p>सम्पूर्ण मण्डली एकसाथ भेला भई प्रभुको महिमा, जीवित आराधना र जग बदल्ने परमेश्वरको बचन सुन्ने मुख्य समय।</p>
                     </div>
                 </div>
 
                 <!-- २. जवान संगति -->
-                <div class="service-card">
-                    <img src="https://unsplash.com" alt="जवान संगति">
-                    <div class="service-content">
-                        <h3>जवान सङ्गति</h3>
-                        <p><strong>समय:</strong> प्रत्येक शनिवार युवाहरूका लागि विशेष समय</p>
-                        <p style="margin-top: 5px;">युवा पुस्तालाई आत्मिक जगमा बलियो बनाउन, सङ्गति गर्न र नेतृत्व विकास गर्न सञ्चालित सेवा।</p>
-                    </div>
-                </div>
-
-                <!-- ३. आमा संगति -->
-                <div class="service-card">
-                    <img src="https://unsplash.com" alt="आमा संगति">
-                    <div class="service-content">
-                        <h3>आमा सङ्गति</h3>
-                        <p><strong>समय:</strong> प्रत्येक मङ्गलवार दिउँसो २:०० बजे</p>
-                        <p style="margin-top: 5px;">मण्डलीका दिदीबहिनी तथा आमाहरू एकत्रित भई घर-परिवार, मण्डली र समाजका लागि प्रार्थना र बचन बाँड्ने समय।</p>
-                    </div>
-                </div>
-
-                <!-- ४. घरेलु संगति -->
-                <div class="service-card">
-                    <img src="https://unsplash.com" alt="घरेलु संगति">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
