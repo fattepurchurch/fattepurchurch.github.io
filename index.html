@@ -3,97 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>हाम्रो चर्च - प्रभूको महिमा होस्</title>
+    <title>फत्तेपुर मण्डली - स्वागत छ</title>
     <style>
-        /* सादा र आधुनिक डिजाइनका लागि CSS */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: #fff; padding: 20px 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        nav { background: #34495e; text-align: center; padding: 10px; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { color: #f1c40f; }
-        .hero { background: #f4f6f7; text-align: center; padding: 60px 20px; border-bottom: 3px solid #f1c40f; }
-        .container { max-width: 960px; margin: 20px auto; padding: 0 20px; }
-        .section { margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .card h3 { color: #2c3e50; margin-top: 0; }
-        footer { background: #2c3e50; color: #fff; text-align: center; padding: 15px 0; margin-top: 40px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .contact-form button { background: #2c3e50; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
-        .contact-form button:hover { background: #34495e; }
+        /* आधुनिक र व्यावसायिक CSS रिसेट र बक्स मोडेल */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f8f9fa; color: #2d3748; line-height: 1.7; }
+        
+        /* हेडर र नेभिगेसन */
+        header { background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%); color: #fff; padding: 25px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; letter-spacing: 1px; color: #fbd38d; }
+        header p { font-size: 1.1rem; opacity: 0.9; font-style: italic; }
+
+        nav { background-color: #2d3748; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: center; }
+        nav .nav-container { max-width: 1200px; width: 100%; display: flex; justify-content: center; padding: 0 10px; }
+        nav a { color: #edf2f7; padding: 15px 20px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.95rem; transition: all 0.3s ease; }
+        nav a:hover { color: #fbd38d; background-color: #4a5568; }
+
+        /* हिरो सेक्सन */
+        .hero { background: #fff; text-align: center; padding: 80px 20px; border-bottom: 4px solid #fbd38d; box-shadow: inset 0 -10px 20px rgba(0,0,0,0.02); }
+        .hero h2 { font-size: 2rem; color: #1a365d; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #4a5568; font-weight: 500; }
+
+        /* मुख्य कन्टेनर र ग्रिड - कम्प्युटरका लागि */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .section { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        .section h2 { color: #1a365d; font-size: 1.8rem; margin-bottom: 20px; border-left: 5px solid #fbd38d; padding-left: 15px; }
+
+        /* रेस्पोन्सिभ ग्रिड (PC मा ३ वटा कोलम, मोबाइलमा १ वटा) */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 20px; }
+        .card { background: #f7fafc; padding: 25px; border-radius: 6px; border: 1px solid #e2e8f0; transition: transform 0.3s ease, box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card h3 { color: #2b6cb0; margin-bottom: 12px; font-size: 1.3rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        .card p { color: #4a5568; font-size: 1rem; }
+
+        /* सम्पर्क फारम र बक्स */
+        .contact-flex { display: flex; flex-wrap: wrap; gap: 40px; }
+        .contact-info { flex: 1; min-width: 280px; }
+        .contact-info p { margin-bottom: 15px; font-size: 1.05rem; }
+        .contact-info strong { color: #1a365d; }
+        
+        .contact-form { flex: 1.5; min-width: 300px; background: #f7fafc; padding: 30px; border-radius: 6px; border: 1px solid #e2e8f0; }
+        .contact-form h3 { margin-bottom: 15px; color: #1a365d; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 1rem; transition: border 0.3s ease; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: #2b6cb0; outline: none; }
+        .contact-form button { background-color: #1a365d; color: white; padding: 14px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: 600; width: 100%; transition: background 0.3s ease; }
+        .contact-form button:hover { background-color: #2a4365; }
+
+        /* फुटर */
+        footer { background-color: #1a365d; color: #fff; text-align: center; padding: 25px 20px; margin-top: 60px; font-size: 0.95rem; }
+        footer p { opacity: 0.8; }
+
+        /* 📱 मोबाइल स्क्रिनका लागि विशेष मिलावट (Responsive Breakpoints) */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+            .hero { padding: 50px 15px; }
+            .hero h2 { font-size: 1.6rem; }
+            .hero p { font-size: 1.05rem; }
+            nav .nav-container { flex-direction: column; }
+            nav a { text-align: center; padding: 12px 10px; font-size: 0.9rem; border-bottom: 1px solid #4a5568; }
+            nav a:last-child { border-bottom: none; }
+            .section { padding: 25px 15px; }
+            .contact-flex { flex-direction: column; gap: 25px; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- मुख्य हेडर -->
     <header>
-        <h1>हाम्रो चर्च नाम</h1>
+        <h1>फत्तेपुर मण्डली</h1>
         <p>प्रभू येशू ख्रीष्टको अनुग्रह र शान्ति तपाईंहरूलाई भएको होस्।</p>
     </header>
 
+    <!-- उत्तरदायी मेनु बार -->
     <nav>
-        <a href="#home">गृह पृष्ठ</a>
-        <a href="#about">हाम्रो बारेमा</a>
-        <a href="#services">संगति समय</a>
-        <a href="#contact">सम्पर्क</a>
+        <div class="nav-container">
+            <a href="#home">गृह पृष्ठ</a>
+            <a href="#about">हाम्रो बारेमा</a>
+            <a href="#services">सङ्गति समय</a>
+            <a href="#contact">सम्पर्क</a>
+        </div>
     </nav>
 
+    <!-- मुख्य आकर्षक ब्यानर (Hero Section) -->
     <div class="hero" id="home">
-        <h2>चर्चको मुख्य नारा वा बचनको पद यहाँ लेख्नुहोस्</h2>
-        <p>"किनभने जहाँ दुई वा तीन जना मेरो नाममा भेला हुन्छन्, त्यहाँ म तिनीहरूका बीचमा हुन्छु।" - मत्ती १८:२०</p>
+        <h2>फत्तेपुर मण्डलीमा तपाईंलाई स्वागत छ</h2>
+        <p>"किनभने जहाँ दुई वा तीन जना मेरो नाममा भेला हुन्छन्, त्यहाँ म तिनीहरूका बीचमा हुन्छु।" <br>— मत्ती १८:२०</p>
     </div>
 
     <div class="container">
         <!-- हाम्रो बारेमा सेक्सन -->
         <div class="section" id="about">
             <h2>हाम्रो बारेमा (About Us)</h2>
-            <p>यहाँ तपाईंको चर्चको इतिहास, स्थापना र उद्देश्यको बारेमा छोटो र मिठो विवरण लेख्नुहोस्। चर्चले कसरी समुदायमा सेवा पुर्‍याइरहेको छ र यसको जग के हो भन्ने कुरा यहाँ राख्न सकिन्छ।</p>
+            <p>फत्तेपुर मण्डली परमेश्वरको बचन, आपसी प्रेम र सङ्गतिमा आधारित एउटा ख्रीष्टियन समुदाय हो। हाम्रो मुख्य उद्देश्य प्रभू येशू ख्रीष्टको सुसमाचार फैलाउनु, विश्वासीहरूलाई आत्मिक रूपमा बलियो बनाउनु र समाजमा सकारात्मक परिवर्तन ल्याउनु हो। हामी यहाँहरू सबैलाई प्रभूको न्यानो प्रेममा स्वागत गर्दछौँ।</p>
         </div>
 
-        <!-- संगति समय सेक्सन -->
+        <!-- सङ्गति समय सेक्सन - रेस्पोन्सिभ ग्रिड -->
         <div class="section" id="services">
-            <h2>साप्ताहिक संगति र सेवाहरू (Service Times)</h2>
+            <h2>साप्ताहिक सङ्गति र सेवाहरू (Service Times)</h2>
             <div class="grid">
                 <div class="card">
                     <h3>शनिबारीय मुख्य सेवा</h3>
                     <p><strong>समय:</strong> बिहान १०:०० बजे देखि १२:३० बजेसम्म</p>
-                    <p>सङ्गति, आराधना र जीवन परिवर्तन गर्ने परमेश्वरको बचनका लागि हामीसँग जोड्नुहोस्।</p>
+                    <p style="margin-top: 10px;">साझा सङ्गति, आराधना र जीवन परिवर्तन गर्ने परमेश्वरको जीवित बचनका लागि हामीसँग जोड्नुहोस्।</p>
                 </div>
                 <div class="card">
-                    <h3>मङ्गलवार सङ्गति</h3>
+                    <h3>मङ्गलवार महिला सङ्गति</h3>
                     <p><strong>समय:</strong> दिउँसो २:०० बजे</p>
-                    <p>महिला सङ्गति तथा विशेष प्रार्थनाको समय।</p>
+                    <p style="margin-top: 10px;">मण्डलीका दिदीबहिनीहरू एकसाथ भई प्रार्थना, गवाही र बचन बाँड्ने विशेष समय।</p>
                 </div>
                 <div class="card">
-                    <h3>शुक्रवार प्रार्थना सेवा</h3>
+                    <h3>शुक्रवार उपवास प्रार्थना</h3>
                     <p><strong>समय:</strong> बेलुकी ५:०० बजे</p>
-                    <p>चर्च र देशका लागि उपवास तथा मध्यस्थता प्रार्थना।</p>
+                    <p style="margin-top: 10px;">मण्डली, समुदाय, देश र बिरामीहरूको निकोपनाका लागि एकमन भई मध्यस्थता प्रार्थना गर्ने समय।</p>
                 </div>
             </div>
         </div>
 
-        <!-- सम्पर्क सेक्सन -->
+        <!-- सम्पर्क सेक्सन र फारम -->
         <div class="section" id="contact">
             <h2>हामीलाई सम्पर्क गर्नुहोस् (Contact Us)</h2>
-            <p><strong>ठेगाना:</strong> तपाईंको चर्च रहेको स्थान, नेपाल</p>
-            <p><strong>फोन नम्बर:</strong> +९७७-९८XXXXXXXX</p>
-            <p><strong>इमेल:</strong> info@yourchurch.com</p>
-            
-            <div class="contact-form">
-                <h3>प्रार्थना अनुरोध वा जिज्ञासा पठाउनुहोस्</h3>
-                <form action="#" method="POST">
-                    <input type="text" placeholder="तपाईंको नाम" required>
-                    <input type="email" placeholder="तपाईंको इमेल" required>
-                    <textarea rows="5" placeholder="तपाईंको सन्देश वा प्रार्थना अनुरोध..." required></textarea>
-                    <button type="submit">सन्देश पठाउनुहोस्</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 हाम्रो चर्च। सबै अधिकार सुरक्षित छन्।</p>
-    </footer>
-
-</body>
-</html>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <p>चर्च वा सङ्गतिका बारेमा थप जानकारी चाहिएमा वा प्रार्थना अनुरोध भएमा हामीलाई सम्पर्क गर्न सक्नुहुन्छ।</p>
+                    <p style="margin-top: 20px;"><strong>📍 ठेगाना:</strong> फत्तेपुर, नेपाल</p>
+                    <p><strong>📞 फोन नम्बर:</strong> +९७७-९८XXXXXXXX</p>
+                    <p><strong>✉️ इमेल:</strong> fattepurchurch@gmail.com</p>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>प्रार्थना अनुरोध पठाउनुहोस्</h3>
+                    <form action="#" method="POST">
+                        <input type="text" placeholder="तपाईंको पूरा नाम" required>
+                        <input type="email" placeholder="तपाईंको इमेल ठेगाना" required>
+                        <textarea rows="4" placeholder="तपाईंको प्रार्थनाको विषय वा सन्देश..." required></textarea>
