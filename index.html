@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हाम्रो चर्च - प्रभूको महिमा होस्</title>
+    <style>
+        /* सादा र आधुनिक डिजाइनका लागि CSS */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        header { background: #2c3e50; color: #fff; padding: 20px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        nav { background: #34495e; text-align: center; padding: 10px; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #f1c40f; }
+        .hero { background: #f4f6f7; text-align: center; padding: 60px 20px; border-bottom: 3px solid #f1c40f; }
+        .container { max-width: 960px; margin: 20px auto; padding: 0 20px; }
+        .section { margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .card h3 { color: #2c3e50; margin-top: 0; }
+        footer { background: #2c3e50; color: #fff; text-align: center; padding: 15px 0; margin-top: 40px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .contact-form button { background: #2c3e50; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+        .contact-form button:hover { background: #34495e; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>हाम्रो चर्च नाम</h1>
+        <p>प्रभू येशू ख्रीष्टको अनुग्रह र शान्ति तपाईंहरूलाई भएको होस्।</p>
+    </header>
+
+    <nav>
+        <a href="#home">गृह पृष्ठ</a>
+        <a href="#about">हाम्रो बारेमा</a>
+        <a href="#services">संगति समय</a>
+        <a href="#contact">सम्पर्क</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <h2>चर्चको मुख्य नारा वा बचनको पद यहाँ लेख्नुहोस्</h2>
+        <p>"किनभने जहाँ दुई वा तीन जना मेरो नाममा भेला हुन्छन्, त्यहाँ म तिनीहरूका बीचमा हुन्छु।" - मत्ती १८:२०</p>
+    </div>
+
+    <div class="container">
+        <!-- हाम्रो बारेमा सेक्सन -->
+        <div class="section" id="about">
+            <h2>हाम्रो बारेमा (About Us)</h2>
+            <p>यहाँ तपाईंको चर्चको इतिहास, स्थापना र उद्देश्यको बारेमा छोटो र मिठो विवरण लेख्नुहोस्। चर्चले कसरी समुदायमा सेवा पुर्‍याइरहेको छ र यसको जग के हो भन्ने कुरा यहाँ राख्न सकिन्छ।</p>
+        </div>
+
+        <!-- संगति समय सेक्सन -->
+        <div class="section" id="services">
+            <h2>साप्ताहिक संगति र सेवाहरू (Service Times)</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>शनिबारीय मुख्य सेवा</h3>
+                    <p><strong>समय:</strong> बिहान १०:०० बजे देखि १२:३० बजेसम्म</p>
+                    <p>सङ्गति, आराधना र जीवन परिवर्तन गर्ने परमेश्वरको बचनका लागि हामीसँग जोड्नुहोस्।</p>
+                </div>
+                <div class="card">
+                    <h3>मङ्गलवार सङ्गति</h3>
+                    <p><strong>समय:</strong> दिउँसो २:०० बजे</p>
+                    <p>महिला सङ्गति तथा विशेष प्रार्थनाको समय।</p>
+                </div>
+                <div class="card">
+                    <h3>शुक्रवार प्रार्थना सेवा</h3>
+                    <p><strong>समय:</strong> बेलुकी ५:०० बजे</p>
+                    <p>चर्च र देशका लागि उपवास तथा मध्यस्थता प्रार्थना।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- सम्पर्क सेक्सन -->
+        <div class="section" id="contact">
+            <h2>हामीलाई सम्पर्क गर्नुहोस् (Contact Us)</h2>
+            <p><strong>ठेगाना:</strong> तपाईंको चर्च रहेको स्थान, नेपाल</p>
+            <p><strong>फोन नम्बर:</strong> +९७७-९८XXXXXXXX</p>
+            <p><strong>इमेल:</strong> info@yourchurch.com</p>
+            
+            <div class="contact-form">
+                <h3>प्रार्थना अनुरोध वा जिज्ञासा पठाउनुहोस्</h3>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="तपाईंको नाम" required>
+                    <input type="email" placeholder="तपाईंको इमेल" required>
+                    <textarea rows="5" placeholder="तपाईंको सन्देश वा प्रार्थना अनुरोध..." required></textarea>
+                    <button type="submit">सन्देश पठाउनुहोस्</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 हाम्रो चर्च। सबै अधिकार सुरक्षित छन्।</p>
+    </footer>
+
+</body>
+</html>
