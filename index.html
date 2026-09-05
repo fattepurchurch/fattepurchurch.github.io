@@ -1,2008 +1,1017 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tokyo Nepali Church | Nepali Christian Fellowship in Tokyo Japan</title>
-<meta name="description" content="A welcoming Nepali Christian church in Tokyo offering Sunday worship, youth fellowship, sermons, prayer, and community for all believers.">
-<meta name="keywords" content="Nepali church Tokyo, Christian fellowship Japan, Sunday service Tokyo, Nepali church Japan">
-<meta property="og:title" content="Tokyo Nepali Church | Nepali Christian Fellowship in Tokyo Japan">
-<meta property="og:description" content="A welcoming Nepali Christian church in Tokyo offering Sunday worship, youth fellowship, sermons, prayer, and community for all believers.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Open+Sans:wght@400;500;600&amp;family=Noto+Sans+Devanagari:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>फत्तेपुर मण्डली नेपाल — Fattepur Church Nepal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
-/* ===== CSS VARIABLES ===== */
-:root {
-  --primary: #1a3a6b;
-  --primary-dark: #0f2347;
-  --primary-light: #2a5298;
-  --gold: #c9a84c;
-  --gold-light: #e8c96a;
-  --gold-pale: #f9f3e3;
-  --white: #ffffff;
-  --off-white: #f8f9fc;
-  --text-dark: #1a1a2e;
-  --text-body: #4a5568;
-  --text-light: #718096;
-  --border: #e2e8f0;
-  --shadow-sm: 0 2px 8px rgba(26,58,107,0.08);
-  --shadow-md: 0 8px 30px rgba(26,58,107,0.12);
-  --shadow-lg: 0 20px 60px rgba(26,58,107,0.16);
-  --radius: 16px;
-  --radius-sm: 10px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    :root {
+      --navy:    #1a2744;
+      --gold:    #c49a2a;
+      --gold-lt: #e8c55a;
+      --cream:   #f7f4ef;
+      --white:   #ffffff;
+      --gray:    #6b7280;
+      --gray-lt: #f0ede8;
+      --text:    #1c1c1c;
+      --border:  #d9d3c9;
+    }
 
-/* ===== RESET &amp; BASE ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text-body);
-  background: var(--white);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
+    html { scroll-behavior: smooth; }
 
-h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-dark);
-  line-height: 1.2;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-.nepali {
-  font-family: 'Noto Sans Devanagari', sans-serif;
-  line-height: 1.8;
-}
+    /* ──────────── TOP BAR ──────────── */
+    .topbar {
+      background: var(--navy);
+      color: #cdd4e8;
+      font-size: 13px;
+      padding: 7px 0;
+    }
+    .topbar-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .topbar a { color: #cdd4e8; text-decoration: none; }
+    .topbar a:hover { color: var(--gold-lt); }
+    .topbar-social { display: flex; gap: 14px; }
+    .topbar-social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      transition: border-color .2s, background .2s;
+    }
+    .topbar-social a:hover { background: var(--gold); border-color: var(--gold); }
+    .topbar-social svg { width: 13px; height: 13px; fill: currentColor; }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+    /* ──────────── HEADER ──────────── */
+    header {
+      background: var(--white);
+      border-bottom: 2px solid var(--gold);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    }
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none; color: var(--navy);
+    }
+    .logo-icon {
+      width: 48px; height: 48px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 26px; height: 26px; fill: var(--gold); }
+    .logo-text-wrap { line-height: 1.2; }
+    .logo-ne { font-family: 'Tiro Devanagari Hindi', serif; font-size: 17px; font-weight: 700; color: var(--navy); }
+    .logo-en { font-size: 11px; letter-spacing: .04em; color: var(--gray); text-transform: uppercase; }
 
-.section { padding: 90px 0; }
-.section-alt { background: var(--off-white); }
+    /* NAV */
+    nav { display: flex; align-items: center; gap: 2px; }
+    .nav-link {
+      font-size: 14px; font-weight: 500;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background .15s, color .15s;
+      white-space: nowrap;
+    }
+    .nav-link:hover { background: var(--gray-lt); color: var(--navy); }
+    .nav-link.active { color: var(--gold); }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.section-header .label {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.section-header h2 {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 16px;
-}
-.section-header p {
-  font-size: 16px;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto;
-}
-.section-header .nepali-sub {
-  font-size: 15px;
-  color: var(--text-body);
-  margin-top: 8px;
-}
+    /* Dropdown */
+    .nav-item { position: relative; }
+    .nav-item:hover .dropdown { display: block; }
+    .dropdown {
+      display: none;
+      position: absolute; top: 100%; left: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--gold);
+      min-width: 180px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+      border-radius: 0 0 6px 6px;
+      z-index: 200;
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 16px;
+      font-size: 14px;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gray-lt);
+      transition: background .12s;
+    }
+    .dropdown a:last-child { border-bottom: none; }
+    .dropdown a:hover { background: var(--gray-lt); color: var(--gold); }
+    .caret { font-size: 10px; margin-left: 3px; }
 
-/* Gold divider */
-.gold-line {
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  border-radius: 2px;
-  margin: 16px auto;
-}
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      margin-left: 8px;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
 
-/* ===== NAVIGATION ===== */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background: rgba(26, 58, 107, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(201,168,76,0.25);
-  transition: var(--transition);
-}
-nav.scrolled {
-  background: rgba(15, 35, 71, 0.99);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-}
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-}
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.nav-logo .logo-icon {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
-.nav-logo .logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-.nav-logo .logo-text strong {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: 0.5px;
-}
-.nav-logo .logo-text span {
-  font-size: 11px;
-  color: rgba(255,255,255,0.6);
-  font-weight: 500;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.nav-links a {
-  color: rgba(255,255,255,0.85);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: var(--transition);
-}
-.nav-links a:hover {
-  color: var(--gold-light);
-  background: rgba(255,255,255,0.08);
-}
-.nav-cta {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
-  color: var(--primary-dark) !important;
-  font-weight: 700 !important;
-  padding: 9px 20px !important;
-}
-.nav-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(201,168,76,0.4) !important;
-  background: rgba(255,255,255,0.08) !important;
-}
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  flex-direction: column;
-  gap: 5px;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: var(--transition);
-}
-.mobile-menu {
-  display: none;
-  background: var(--primary-dark);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 16px 24px;
-}
-.mobile-menu a {
-  display: block;
-  color: rgba(255,255,255,0.85);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  transition: var(--transition);
-}
-.mobile-menu a:hover { color: var(--gold-light); }
-.mobile-menu a:last-child { border-bottom: none; }
+    /* Hamburger */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger svg { width: 26px; height: 26px; stroke: var(--navy); }
 
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: var(--primary-dark);
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(135deg, rgba(15,35,71,0.92) 0%, rgba(26,58,107,0.80) 50%, rgba(15,35,71,0.90) 100%),
-    url('https://images.unsplash.com/photo-1438232992991-995b671e5ade?w=1800&amp;q=80') center/cover no-repeat;
-  z-index: 0;
-}
-.hero-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(201,168,76,0.12) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(42,82,152,0.3) 0%, transparent 50%);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 120px 24px 80px;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(201,168,76,0.15);
-  border: 1px solid rgba(201,168,76,0.35);
-  border-radius: 100px;
-  padding: 8px 20px;
-  color: var(--gold-light);
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  animation: fadeInDown 0.8s ease both;
-}
-.hero-badge::before { content: '✦'; font-size: 10px; }
-.hero h1 {
-  font-size: clamp(42px, 7vw, 82px);
-  font-weight: 900;
-  color: var(--white);
-  line-height: 1.05;
-  margin-bottom: 12px;
-  animation: fadeInUp 0.8s ease 0.1s both;
-}
-.hero h1 .gold { color: var(--gold-light); }
-.hero .sub-en {
-  font-size: clamp(18px, 3vw, 26px);
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
-.hero .sub-np {
-  font-size: clamp(14px, 2vw, 17px);
-  color: rgba(255,255,255,0.70);
-  max-width: 620px;
-  margin: 0 auto 40px;
-  line-height: 2;
-  animation: fadeInUp 0.8s ease 0.3s both;
-}
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeInUp 0.8s ease 0.4s both;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 16px 32px;
-  border-radius: 12px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  border: none;
-  transition: var(--transition);
-  text-decoration: none;
-}
-.btn-gold {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--primary-dark);
-}
-.btn-gold:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(201,168,76,0.45);
-}
-.btn-outline {
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-  border: 2px solid rgba(255,255,255,0.35);
-  backdrop-filter: blur(10px);
-}
-.btn-outline:hover {
-  background: rgba(255,255,255,0.18);
-  border-color: rgba(255,255,255,0.6);
-  transform: translateY(-3px);
-}
-.btn-primary {
-  background: var(--primary);
-  color: var(--white);
-}
-.btn-primary:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-.hero-scroll {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  animation: bounce 2s infinite;
-}
-.hero-scroll span {
-  display: block;
-  width: 28px;
-  height: 44px;
-  border: 2px solid rgba(255,255,255,0.4);
-  border-radius: 14px;
-  position: relative;
-  margin: 0 auto;
-}
-.hero-scroll span::before {
-  content: '';
-  position: absolute;
-  top: 7px; left: 50%;
-  transform: translateX(-50%);
-  width: 5px; height: 5px;
-  background: var(--gold-light);
-  border-radius: 50%;
-  animation: scrollDot 2s infinite;
-}
+    /* ──────────── HERO ──────────── */
+    .hero {
+      position: relative;
+      min-height: 560px;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--navy) 0%, #2c3e6e 60%, #1a2744 100%);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w1200-h630-p-k-no-nu/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg') center/cover no-repeat;
+      opacity: 0.18;
+    }
+    /* Cross pattern overlay */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 80% 50%, rgba(196,154,42,.12) 0%, transparent 60%);
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 1120px; margin: 0 auto; padding: 80px 24px;
+      display: flex; align-items: center; gap: 60px;
+    }
+    .hero-content { flex: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(196,154,42,.2);
+      border: 1px solid var(--gold);
+      color: var(--gold-lt);
+      font-size: 12px; letter-spacing: .08em;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 22px;
+      font-weight: 500;
+    }
+    .hero h1 {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(32px, 5vw, 54px);
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+    .hero h1 span { color: var(--gold-lt); }
+    .hero-sub {
+      color: #c5ccdc;
+      font-size: 16px;
+      max-width: 500px;
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 13px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,.4);
+      color: var(--white);
+      padding: 13px 28px;
+      border-radius: 4px;
+      font-size: 15px;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
 
-/* ===== SERVICE INFO ===== */
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 0;
-}
-.service-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 36px 32px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--gold);
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 80px; height: 80px;
-  background: var(--gold-pale);
-  border-radius: 0 0 0 80px;
-  opacity: 0.6;
-}
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-.service-card .icon {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-.service-card h3 {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 16px;
-  font-family: 'Montserrat', sans-serif;
-}
-.service-info-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-.service-info-row .si-icon {
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.service-info-row .si-text {
-  color: var(--text-body);
-  line-height: 1.5;
-}
-.service-info-row .si-text strong {
-  display: block;
-  color: var(--text-dark);
-  font-weight: 600;
-  font-size: 15px;
-}
-.service-card .np-note {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-size: 13px;
-  color: var(--text-light);
-  line-height: 1.9;
-}
+    .hero-cross {
+      flex-shrink: 0;
+      opacity: 0.25;
+    }
+    .hero-cross svg { width: 180px; height: 180px; fill: var(--gold); }
 
-/* ===== ABOUT ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
-}
-.about-text .label {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.about-text h2 {
-  font-size: clamp(28px, 3.5vw, 40px);
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 20px;
-}
-.about-text p { margin-bottom: 16px; font-size: 15px; color: var(--text-body); }
-.about-text .np-block {
-  background: var(--gold-pale);
-  border-left: 4px solid var(--gold);
-  border-radius: 0 12px 12px 0;
-  padding: 20px 24px;
-  margin: 20px 0;
-  font-size: 14px;
-  line-height: 2;
-  color: var(--text-dark);
-}
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 28px;
-}
-.stat-box {
-  background: var(--primary);
-  border-radius: var(--radius-sm);
-  padding: 20px;
-  text-align: center;
-  color: var(--white);
-}
-.stat-box .num {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--gold-light);
-  display: block;
-}
-.stat-box .desc {
-  font-size: 12px;
-  opacity: 0.8;
-  margin-top: 4px;
-}
-.about-image {
-  position: relative;
-}
-.about-image img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
-}
-.about-image .img-badge {
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
-  background: var(--gold);
-  color: var(--primary-dark);
-  border-radius: 14px;
-  padding: 20px 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  box-shadow: var(--shadow-md);
-  line-height: 1.3;
-}
-.about-image .img-badge span { font-size: 26px; display: block; }
+    /* ──────────── SECTION SHARED ──────────── */
+    section { padding: 72px 0; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      font-size: 12px; letter-spacing: .12em; font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-style: normal;
+    }
+    .section-title {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(24px, 3.5vw, 36px);
+      color: var(--navy);
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .section-subtitle {
+      color: var(--gray);
+      max-width: 520px;
+      font-size: 15px;
+    }
+    .divider {
+      width: 48px; height: 3px;
+      background: var(--gold);
+      margin: 18px 0 36px;
+      border-radius: 2px;
+    }
 
-/* ===== SERMONS ===== */
-.sermons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-}
-.sermon-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border);
-  transition: var(--transition);
-}
-.sermon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-.sermon-card .video-wrap {
-  position: relative;
-  padding-bottom: 56.25%;
-  background: var(--primary-dark);
-}
-.sermon-card .video-wrap iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.sermon-card .card-body {
-  padding: 24px;
-}
-.sermon-card .tag {
-  display: inline-block;
-  background: var(--gold-pale);
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  border-radius: 100px;
-  font-size: 11px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  margin-bottom: 10px;
-}
-.sermon-card h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 8px;
-}
-.sermon-card p { font-size: 13px; color: var(--text-light); }
+    /* ──────────── ABOUT STRIP ──────────── */
+    .about-strip {
+      background: var(--navy);
+      padding: 52px 0;
+    }
+    .about-strip .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .strip-stat { text-align: center; color: var(--white); }
+    .strip-stat .num {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 44px;
+      color: var(--gold-lt);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .strip-stat .lbl { font-size: 13px; color: #9aabc5; letter-spacing: .04em; }
+    .strip-divider { width: 1px; height: 60px; background: rgba(255,255,255,.15); margin: 0 auto; }
 
-/* ===== EVENTS ===== */
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-.event-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border);
-  transition: var(--transition);
-  display: flex;
-}
-.event-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-.event-card .date-block {
-  background: var(--primary);
-  color: var(--white);
-  min-width: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 14px;
-  text-align: center;
-}
-.event-card .date-block .day {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  font-weight: 900;
-  color: var(--gold-light);
-  line-height: 1;
-}
-.event-card .date-block .month {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.8;
-  margin-top: 4px;
-}
-.event-card .event-info {
-  padding: 20px 22px;
-  flex: 1;
-}
-.event-card .event-info h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 6px;
-}
-.event-card .event-info p {
-  font-size: 13px;
-  color: var(--text-light);
-  margin-bottom: 4px;
-}
-.event-card .event-badge {
-  display: inline-block;
-  background: var(--gold-pale);
-  color: var(--gold);
-  border-radius: 100px;
-  font-size: 10px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  margin-top: 8px;
-}
+    /* ──────────── ABOUT SECTION ──────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-img {
+      position: relative;
+    }
+    .about-img img {
+      width: 100%;
+      border-radius: 6px;
+      display: block;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .about-img::before {
+      content: '';
+      position: absolute;
+      top: -14px; left: -14px;
+      right: 14px; bottom: 14px;
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+      z-index: -1;
+    }
+    .about-text p { color: var(--gray); margin-bottom: 16px; font-size: 15px; line-height: 1.8; }
+    .about-verse {
+      background: var(--gray-lt);
+      border-left: 3px solid var(--gold);
+      padding: 18px 20px;
+      margin: 24px 0;
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 15px;
+      color: var(--navy);
+      font-style: italic;
+      line-height: 1.7;
+    }
 
-/* ===== GALLERY ===== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  gap: 12px;
-}
-.gallery-item {
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
-.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-.gallery-item:nth-child(4) { grid-column: span 2; }
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  min-height: 180px;
-}
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-item .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(26,58,107,0);
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.gallery-item:hover .overlay {
-  background: rgba(26,58,107,0.45);
-}
-.gallery-item .overlay span {
-  color: var(--white);
-  font-size: 28px;
-  opacity: 0;
-  transform: scale(0.7);
-  transition: var(--transition);
-}
-.gallery-item:hover .overlay span {
-  opacity: 1;
-  transform: scale(1);
-}
+    /* ──────────── POSTS ──────────── */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 8px;
+    }
+    .post-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: box-shadow .2s, transform .2s;
+      background: var(--white);
+    }
+    .post-card:hover { box-shadow: 0 8px 32px rgba(26,39,68,.12); transform: translateY(-3px); }
+    .post-card img {
+      width: 100%; height: 200px; object-fit: cover;
+      display: block;
+    }
+    .post-body { padding: 20px; }
+    .post-tag {
+      font-size: 11px; font-weight: 600; letter-spacing: .08em;
+      color: var(--gold); margin-bottom: 8px;
+      display: block;
+    }
+    .post-title {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 17px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .post-excerpt { font-size: 14px; color: var(--gray); line-height: 1.65; margin-bottom: 16px; }
+    .post-meta { font-size: 12px; color: #9ca3af; }
+    .post-link {
+      display: inline-block;
+      font-size: 13px; font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--gold);
+      padding-bottom: 1px;
+      transition: color .15s;
+    }
+    .post-link:hover { color: var(--gold); }
 
-/* ===== MAP ===== */
-.map-section { background: var(--primary-dark); }
-.map-section .section-header .label { color: var(--gold-light); }
-.map-section .section-header h2 { color: var(--white); }
-.map-section .section-header p { color: rgba(255,255,255,0.65); }
-.map-wrap {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 2px solid rgba(201,168,76,0.3);
-}
-.map-wrap iframe {
-  width: 100%;
-  height: 420px;
-  display: block;
-  border: none;
-}
-.map-info {
-  display: flex;
-  gap: 24px;
-  margin-top: 28px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-.map-detail {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: rgba(255,255,255,0.8);
-  font-size: 14px;
-}
-.map-detail .mi-icon {
-  width: 42px; height: 42px;
-  background: rgba(201,168,76,0.15);
-  border: 1px solid rgba(201,168,76,0.3);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.map-detail strong { display: block; color: var(--white); font-size: 15px; }
+    /* ──────────── VERSES BANNER ──────────── */
+    .verses-banner {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 0;
+    }
+    .verses-banner .section-title { text-align: center; }
+    .verses-banner .divider { margin: 18px auto 40px; }
+    .verses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .verse-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 26px 22px;
+    }
+    .verse-ref {
+      font-size: 12px; font-weight: 600; letter-spacing: .06em;
+      color: var(--gold); margin-bottom: 12px; display: block;
+    }
+    .verse-text {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 15px;
+      color: var(--navy);
+      line-height: 1.75;
+      font-style: italic;
+    }
 
-/* ===== CONTACT ===== */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-.contact-info h3 {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 8px;
-}
-.contact-info .np-sub {
-  font-size: 14px;
-  color: var(--text-light);
-  margin-bottom: 32px;
-  line-height: 1.9;
-}
-.contact-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.contact-row .cr-icon {
-  width: 48px; height: 48px;
-  background: var(--gold-pale);
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-  color: var(--gold);
-}
-.contact-row h4 {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-light);
-  margin-bottom: 4px;
-}
-.contact-row p {
-  font-size: 15px;
-  color: var(--text-dark);
-  font-weight: 600;
-}
-.contact-row a { color: var(--primary); }
-.contact-row a:hover { color: var(--gold); }
-.social-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 28px;
-}
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  transition: var(--transition);
-  color: var(--white);
-}
-.social-btn.fb { background: #1877f2; }
-.social-btn.yt { background: #ff0000; }
-.social-btn.tk { background: #010101; }
-.social-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.contact-visual {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  border-radius: var(--radius);
-  padding: 48px 40px;
-  color: var(--white);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.contact-visual::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 180px; height: 180px;
-  background: rgba(201,168,76,0.1);
-  border-radius: 50%;
-}
-.contact-visual::after {
-  content: '';
-  position: absolute;
-  bottom: -60px; left: -30px;
-  width: 220px; height: 220px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 50%;
-}
-.contact-visual .cv-icon {
-  font-size: 56px;
-  margin-bottom: 20px;
-  position: relative; z-index: 1;
-}
-.contact-visual h3 {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 12px;
-  position: relative; z-index: 1;
-}
-.contact-visual p {
-  font-size: 14px;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 8px;
-  position: relative; z-index: 1;
-  line-height: 1.9;
-}
-.contact-visual .cv-np {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  line-height: 2;
-  position: relative; z-index: 1;
-}
-.contact-visual .cv-pastor {
-  margin-top: 24px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 16px 20px;
-  position: relative; z-index: 1;
-}
-.contact-visual .cv-pastor strong {
-  display: block;
-  font-size: 17px;
-  color: var(--gold-light);
-  margin-bottom: 4px;
-}
-.contact-visual .cv-pastor span {
-  font-size: 13px;
-  opacity: 0.8;
-}
+    /* ──────────── GALLERY ──────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-grid .big { grid-column: span 2; grid-row: span 2; }
+    .gallery-item {
+      overflow: hidden; border-radius: 6px; background: var(--gray-lt);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+      transition: transform .4s;
+      aspect-ratio: 1;
+    }
+    .gallery-item.big img { aspect-ratio: auto; height: 100%; }
+    .gallery-item:hover img { transform: scale(1.04); }
 
-/* ===== FOOTER ===== */
-footer {
-  background: var(--primary-dark);
-  color: rgba(255,255,255,0.75);
-  padding: 70px 0 0;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 50px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.footer-brand .logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.footer-brand .logo-wrap .fi {
-  width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-}
-.footer-brand .logo-wrap strong {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--white);
-}
-.footer-brand p {
-  font-size: 13px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-.footer-brand .fn {
-  font-size: 12px;
-  line-height: 2;
-  color: rgba(255,255,255,0.5);
-}
-.footer-col h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 20px;
-}
-.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul li a {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  transition: var(--transition);
-  display: flex; align-items: center; gap: 6px;
-}
-.footer-col ul li a::before { content: '›'; color: var(--gold); }
-.footer-col ul li a:hover { color: var(--white); padding-left: 4px; }
-.footer-col .service-time {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 8px;
-  display: flex; align-items: center; gap: 8px;
-}
-.footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 0;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.footer-bottom p { font-size: 13px; }
-.footer-bottom .ft-social { display: flex; gap: 10px; }
-.footer-bottom .ft-social a {
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 15px;
-  transition: var(--transition);
-  color: rgba(255,255,255,0.75);
-}
-.footer-bottom .ft-social a:hover {
-  background: var(--gold);
-  color: var(--primary-dark);
-}
+    /* ──────────── CONNECT ──────────── */
+    .connect-section { background: var(--navy); }
+    .connect-section .section-label { color: var(--gold-lt); }
+    .connect-section .section-title { color: var(--white); }
+    .connect-section .divider { background: var(--gold); }
+    .connect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .connect-info p { color: #9aabc5; font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
+    .connect-detail {
+      display: flex; gap: 12px; align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .connect-detail svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; fill: var(--gold); }
+    .connect-detail span { color: #c5ccdc; font-size: 14px; line-height: 1.6; }
+    .social-row { display: flex; gap: 12px; margin-top: 28px; }
+    .social-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 4px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px; font-weight: 500;
+      transition: background .2s, border-color .2s;
+    }
+    .social-btn:hover { background: rgba(255,255,255,.08); border-color: var(--gold); }
+    .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .social-btn.fb:hover { background: #1877f2; border-color: #1877f2; }
+    .social-btn.yt:hover { background: #ff0000; border-color: #ff0000; }
+    .social-btn.ig:hover { background: #e1306c; border-color: #e1306c; }
 
-/* ===== PAGES ===== */
-.page { display: none; }
-.page.active { display: block; }
+    /* Contact form side */
+    .connect-form-wrap h3 {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      color: var(--white); font-size: 20px; font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; color: #9aabc5; margin-bottom: 6px; }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.15);
+      color: var(--white);
+      padding: 11px 14px;
+      border-radius: 4px;
+      font-family: inherit; font-size: 14px;
+      transition: border-color .2s;
+      outline: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .btn-submit {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-weight: 600; font-size: 14px;
+      cursor: pointer;
+      transition: background .2s;
+      font-family: inherit;
+    }
+    .btn-submit:hover { background: var(--gold-lt); }
 
-/* About Page */
-.page-hero {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  color: var(--white);
-  padding: 140px 0 80px;
-  text-align: center;
-}
-.page-hero h1 {
-  font-size: clamp(32px, 5vw, 58px);
-  font-weight: 900;
-  color: var(--white);
-  margin-bottom: 16px;
-}
-.page-hero p { color: rgba(255,255,255,0.75); font-size: 16px; }
-.page-hero .gold-line { margin: 20px auto; }
+    /* ──────────── YOUTUBE ──────────── */
+    .yt-section { background: var(--gray-lt); padding: 72px 0; }
+    .yt-inner { display: flex; gap: 48px; align-items: center; }
+    .yt-text { flex: 1; }
+    .yt-text p { color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
+    .yt-embed { flex: 1; }
+    .yt-embed iframe { width: 100%; aspect-ratio: 16/9; border-radius: 6px; display: block; border: none; }
+    .yt-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #ff0000;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600; font-size: 14px;
+      transition: background .2s;
+    }
+    .yt-link:hover { background: #cc0000; }
+    .yt-link svg { width: 18px; height: 18px; fill: currentColor; }
 
-.belief-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top: 48px;
-}
-.belief-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 32px 28px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--primary);
-  transition: var(--transition);
-  text-align: center;
-}
-.belief-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-.belief-card .bi { font-size: 42px; margin-bottom: 16px; }
-.belief-card h3 {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 12px;
-  font-family: 'Montserrat', sans-serif;
-}
-.belief-card p { font-size: 14px; color: var(--text-body); }
-.belief-card .np { font-size: 13px; color: var(--text-light); margin-top: 8px; line-height: 1.9; }
+    /* ──────────── FOOTER ──────────── */
+    footer {
+      background: #111827;
+      padding: 56px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+    .footer-about .logo { margin-bottom: 18px; }
+    .footer-about .logo-ne { color: var(--white); }
+    .footer-about p { color: #6b7280; font-size: 14px; line-height: 1.8; max-width: 300px; }
+    .footer-col h4 {
+      font-size: 13px; font-weight: 600; letter-spacing: .06em;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      color: #9ca3af; font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: var(--gold-lt); }
+    .footer-bottom {
+      border-top: 1px solid #1f2937;
+      padding: 20px 24px;
+      text-align: center;
+      color: #4b5563;
+      font-size: 13px;
+    }
 
-/* Prayer Request */
-.prayer-box {
-  max-width: 700px;
-  margin: 0 auto;
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 56px 52px;
-  box-shadow: var(--shadow-lg);
-  text-align: center;
-  border: 1px solid var(--border);
-}
-.prayer-box .pb-icon { font-size: 64px; margin-bottom: 24px; }
-.prayer-box h2 {
-  font-size: 30px;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 12px;
-}
-.prayer-box .np-title {
-  font-size: 18px;
-  color: var(--text-body);
-  margin-bottom: 20px;
-}
-.prayer-box p { color: var(--text-body); margin-bottom: 12px; font-size: 15px; }
-.prayer-box .verse {
-  background: var(--gold-pale);
-  border-left: 4px solid var(--gold);
-  border-radius: 0 12px 12px 0;
-  padding: 18px 20px;
-  font-style: italic;
-  color: var(--text-dark);
-  font-size: 14px;
-  line-height: 1.8;
-  text-align: left;
-  margin: 24px 0;
-}
+    /* ──────────── MOBILE NAV ──────────── */
+    .mobile-nav {
+      display: none;
+      position: fixed; inset: 0;
+      background: var(--navy);
+      z-index: 999;
+      flex-direction: column;
+      padding: 24px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-top {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 36px;
+    }
+    .mobile-close { background: none; border: none; color: white; cursor: pointer; }
+    .mobile-close svg { width: 28px; height: 28px; stroke: white; }
+    .mobile-nav a {
+      color: var(--white);
+      font-size: 20px;
+      font-family: 'Tiro Devanagari Hindi', serif;
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      display: block;
+    }
+    .mobile-nav a:hover { color: var(--gold-lt); }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-10px); }
-}
-@keyframes scrollDot {
-  0% { transform: translateX(-50%) translateY(0); opacity: 1; }
-  100% { transform: translateX(-50%) translateY(16px); opacity: 0; }
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-item:nth-child(1), .gallery-item:nth-child(4) { grid-column: span 1; grid-row: span 1; }
-}
-@media (max-width: 768px) {
-  .section { padding: 60px 0; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .hero-content { padding: 100px 20px 70px; }
-  .about-image { display: none; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .prayer-box { padding: 36px 24px; }
-  .service-cards { grid-template-columns: 1fr; }
-  .events-grid { grid-template-columns: 1fr; }
-  .social-links { flex-wrap: wrap; }
-  .map-info { flex-direction: column; align-items: flex-start; }
-}
-@media (max-width: 480px) {
-  .hero h1 { font-size: 38px; }
-  .hero-buttons { flex-direction: column; align-items: center; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .sermons-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-}
-
-/* Active page nav */
-.nav-links a.active-page {
-  color: var(--gold-light);
-  background: rgba(255,255,255,0.1);
-}
-</style>
+    /* ──────────── RESPONSIVE ──────────── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: block; }
+      .hero-cross { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img::before { display: none; }
+      .posts-grid { grid-template-columns: 1fr 1fr; }
+      .verses-grid { grid-template-columns: 1fr 1fr; }
+      .about-strip .container { grid-template-columns: 1fr; gap: 24px; }
+      .strip-divider { width: 60px; height: 1px; }
+      .connect-grid { grid-template-columns: 1fr; }
+      .yt-inner { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .posts-grid { grid-template-columns: 1fr; }
+      .verses-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid .big { grid-column: span 2; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .topbar-info { display: none; }
+      .hero-btns { flex-direction: column; }
+      .social-row { flex-wrap: wrap; }
+      .hero-inner { padding: 60px 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
-<nav id="mainNav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo" onclick="showPage('home')">
-        <div class="logo-icon">✝</div>
-        <div class="logo-text">
-          <strong>Tokyo Nepali Church</strong>
-          <span>TNC · टोक्यो नेपाली चर्च</span>
-        </div>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-info">📍 फत्तेपुर, नेपाल &nbsp;|&nbsp; शनिबार आराधना: बिहान ८:३० बजे</span>
+    <div class="topbar-social">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#" onclick="showPage('home')" class="active-page" id="nav-home">Home</a></li>
-        <li><a href="#" onclick="showPage('about')" id="nav-about">About Us</a></li>
-        <li><a href="#" onclick="showPage('sermons')" id="nav-sermons">Sermons</a></li>
-        <li><a href="#" onclick="showPage('events')" id="nav-events">Events</a></li>
-        <li><a href="#" onclick="showPage('gallery')" id="nav-gallery">Gallery</a></li>
-        <li><a href="#" onclick="showPage('prayer')" id="nav-prayer">Prayer</a></li>
-        <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
-        <li><a href="#" onclick="showPage('home'); setTimeout(()=>document.getElementById('service-section').scrollIntoView({behavior:'smooth'}),100)" class="nav-cta">Visit Sunday</a></li>
-      </ul>
-      <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#" onclick="showPage('home'); toggleMobile()">🏠 Home</a>
-      <a href="#" onclick="showPage('about'); toggleMobile()">📖 About Us</a>
-      <a href="#" onclick="showPage('sermons'); toggleMobile()">🎥 Sermons</a>
-      <a href="#" onclick="showPage('events'); toggleMobile()">📅 Events</a>
-      <a href="#" onclick="showPage('gallery'); toggleMobile()">🖼 Gallery</a>
-      <a href="#" onclick="showPage('prayer'); toggleMobile()">🙏 Prayer Request</a>
-      <a href="#" onclick="showPage('contact'); toggleMobile()">📞 Contact</a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a2744"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/fattepurchurch/" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="#1a2744"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#1a2744" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
     </div>
   </div>
-</nav>
+</div>
 
-<!-- ========================= HOME PAGE ========================= -->
-<div id="page-home" class="page active">
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <!-- Cross icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="2" width="4" height="20" rx="1"/>
+          <rect x="2" y="8" width="20" height="4" rx="1"/>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <div class="logo-ne">फत्तेपुर मण्डली</div>
+        <div class="logo-en">Fattepur Church Nepal</div>
+      </div>
+    </a>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-pattern"></div>
+    <nav>
+      <a href="#hero" class="nav-link active">गृहपृष्ठ</a>
+      <div class="nav-item">
+        <a href="#about" class="nav-link">हाम्रोबारे <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="#about">मण्डलीको परिचय</a>
+          <a href="#gallery">फोटो ग्यालरी</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#posts" class="nav-link">सन्देश <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="#posts">ताजा सन्देशहरु</a>
+          <a href="#verses">बाइबल वचनहरु</a>
+        </div>
+      </div>
+      <a href="#youtube" class="nav-link">भिडियो</a>
+      <a href="#connect" class="nav-link">सम्पर्क</a>
+      <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" class="nav-cta">Facebook</a>
+    </nav>
+
+    <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="मेनु खोल्नुहोस्">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <div class="logo-ne" style="color:white;font-family:'Tiro Devanagari Hindi',serif;font-size:20px;">फत्तेपुर मण्डली</div>
+    <button class="mobile-close" onclick="document.getElementById('mobileNav').classList.remove('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <a href="#hero" onclick="document.getElementById('mobileNav').classList.remove('open')">गृहपृष्ठ</a>
+  <a href="#about" onclick="document.getElementById('mobileNav').classList.remove('open')">हाम्रोबारे</a>
+  <a href="#posts" onclick="document.getElementById('mobileNav').classList.remove('open')">सन्देशहरु</a>
+  <a href="#verses" onclick="document.getElementById('mobileNav').classList.remove('open')">बाइबल वचन</a>
+  <a href="#youtube" onclick="document.getElementById('mobileNav').classList.remove('open')">भिडियो</a>
+  <a href="#gallery" onclick="document.getElementById('mobileNav').classList.remove('open')">फोटो ग्यालरी</a>
+  <a href="#connect" onclick="document.getElementById('mobileNav').classList.remove('open')">सम्पर्क</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge">✦ Welcome · स्वागत छ · Tokyo, Japan</div>
-      <h1><span class="gold">Jesus</span> Loves You</h1>
-      <p class="sub-en">Join Us This Sunday — You Are Welcome Here</p>
-      <p class="sub-np nepali">
-        हामी तपाईंलाई प्रत्येक आइतबार टोक्योमा हुने आराधना, प्रार्थना,<br>
-        संगति र प्रभु येशूको वचनमा सहभागी हुन हार्दिक स्वागत गर्दछौं।
+      <span class="hero-badge">फत्तेपुर, नेपाल • स्थापना बि.सं. २०३७</span>
+      <h1>परमेश्वरको <span>प्रेम</span> र<br/>सेवामा समर्पित</h1>
+      <p class="hero-sub">
+        फत्तेपुर मण्डली — जहाँ प्रत्येक मानिस स्वागत योग्य छ।
+        आराधना, वचन र समुदायमा एकसाथ बढ्ने स्थान।
       </p>
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-gold" onclick="document.getElementById('service-section').scrollIntoView({behavior:'smooth'})">✦ Visit This Sunday</a>
-        <a href="https://maps.google.com/?q=Takadanobaba+Station+Tokyo" target="_blank" class="btn btn-outline">📍 Get Directions</a>
+      <div class="hero-btns">
+        <a href="#about" class="btn-primary">हाम्रोबारे जान्नुहोस्</a>
+        <a href="#connect" class="btn-outline">हामीसँग जोडिनुहोस्</a>
       </div>
     </div>
-    <div class="hero-scroll">
-      <span></span>
+    <div class="hero-cross">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="5" width="20" height="90" rx="4"/>
+        <rect x="5" y="30" width="90" height="20" rx="4"/>
+      </svg>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SERVICE INFO -->
-  <section class="section" id="service-section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="label">Join Us · हामीसँग आउनुहोस्</span>
-        <h2>Service Times &amp; Location</h2>
-        <div class="gold-line"></div>
-        <p>आराधना समय र स्थान — Every week in the heart of Tokyo</p>
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="container">
+    <div class="strip-stat">
+      <div class="num">२०३७</div>
+      <div class="lbl">स्थापना वर्ष (बि.सं.)</div>
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-stat">
+      <div class="num">४६+</div>
+      <div class="lbl">वर्षको सेवा</div>
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-stat">
+      <div class="num">३</div>
+      <div class="lbl">सहयोगी मण्डलीहरु</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w640/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg"
+          alt="फत्तेपुर मण्डलीका सदस्यहरु"
+        />
       </div>
-      <div class="service-cards">
-        <div class="service-card fade-up">
-          <div class="icon">⛪</div>
-          <h3>Sunday Worship Service</h3>
-          <div class="service-info-row">
-            <span class="si-icon">🕐</span>
-            <div class="si-text">
-              <strong>1:00 PM – 3:00 PM</strong>
-              Every Sunday · प्रत्येक आइतबार
-            </div>
-          </div>
-          <div class="service-info-row">
-            <span class="si-icon">📍</span>
-            <div class="si-text">
-              <strong>ICBF Tokyochuo Church</strong>
-              ICBF東京中央チャーチ
-            </div>
-          </div>
-          <div class="service-info-row">
-            <span class="si-icon">🚉</span>
-            <div class="si-text">Near Takadanobaba Station, Tokyo</div>
-          </div>
-          <p class="np-note nepali">आराधना, स्तुति, परमेश्वरको पवित्र वचन र प्रार्थनामा सहभागी हुनुहोस्। प्रभु येशू ख्रीष्टमा स्वागत छ।</p>
+      <div class="about-text">
+        <p class="section-label">हाम्रोबारे</p>
+        <h2 class="section-title">फत्तेपुर मण्डलीको परिचय</h2>
+        <div class="divider"></div>
+        <p>
+          फत्तेपुर मण्डली नेपालको एक सक्रिय ईसाई मण्डली हो जसले बि.सं. २०३७ देखि
+          परमेश्वरको वचन र सेवामा समर्पित भएर काम गर्दै आएको छ।
+          हामी भाग्लपुर मण्डली र गाईघाट मण्डलीसँग मिलेर परमेश्वरको राज्य
+          विस्तार गर्नमा लागिपरेका छौं।
+        </p>
+        <p>
+          प्रत्येक आइतबार हामी एकसाथ जम्मा भएर आराधना गर्छौं, वचन सुन्छौं
+          र एकअर्काको प्रोत्साहन गर्छौं। हाम्रो मण्डलीमा सबैको स्वागत छ —
+          नयाँ र पुरानो, युवा र वृद्ध।
+        </p>
+        <blockquote class="about-verse">
+          "आफ्नो मनले परमप्रभु परमेश्वरलाई माओ र आफ्नो छिमेकीलाई आफैजस्तै माओ।"
+          — मत्ती २२:३७-३९
+        </blockquote>
+        <a href="#connect" class="btn-primary" style="font-size:14px;">हामीसँग भेट्नुहोस्</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section id="posts" style="background: var(--cream);">
+  <div class="container">
+    <p class="section-label">ताजा सन्देशहरु</p>
+    <h2 class="section-title">मण्डलीका अपडेटहरु</h2>
+    <div class="divider"></div>
+
+    <div class="posts-grid">
+      <!-- Post 1 -->
+      <article class="post-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQr-KU9ss_KrUppbVtC-V6z3n5R0ONlkVCDDwlEjjM-UGIdMg9e9570Xr8s0BkzyZ96zF7iIY8rj2_FpZBHpA92HwvyEvE1f3VgJ_6RjEEOhLO1ukhXqGo8e-DsDxFPk1mVY3t0vt45GpE8EIrft6bRVbZMZAXnPMXCsGc_2JXYsIqIqe2g87GwTFuOg/w640/322192779_548497680490541_5398303754353494027_n.jpg" alt="बप्तिस्मा कार्यक्रम"/>
+        <div class="post-body">
+          <span class="post-tag">मण्डली समाचार</span>
+          <h3 class="post-title">बप्तिस्मा कार्यक्रम २०७९ का अपडेटहरु</h3>
+          <p class="post-excerpt">मिति २०७९ पुस १० गतेका दिन सम्पूर्ण फत्तेपुर मण्डलीको उपस्थितिमा पिता पुत्र र पवित्र आत्माको नाममा बप्तिस्मा कार्यक्रम सम्पन्न भयो।</p>
+          <p class="post-meta" style="margin-bottom:14px;">जनवरी २०२३</p>
+          <a href="https://fattepurchurch.blogspot.com/2023/01/blog-post.html" target="_blank" class="post-link">पूरा पढ्नुहोस् →</a>
         </div>
-        <div class="service-card fade-up">
-          <div class="icon">🌟</div>
-          <h3>Youth Fellowship</h3>
-          <div class="service-info-row">
-            <span class="si-icon">🕒</span>
-            <div class="si-text">
-              <strong>3:15 PM – 4:30 PM</strong>
-              Every Sunday · आराधना पछि
-            </div>
-          </div>
-          <div class="service-info-row">
-            <span class="si-icon">📍</span>
-            <div class="si-text">
-              <strong>Same Building</strong>
-              After Sunday worship service
-            </div>
-          </div>
-          <div class="service-info-row">
-            <span class="si-icon">👥</span>
-            <div class="si-text">All youth &amp; young adults welcome</div>
-          </div>
-          <p class="np-note nepali">आराधना पछि युवा संगतिमा सहभागी हुनुहोस् — युवा साथीहरूसँग मिलेर प्रभु येशू ख्रीष्टको महिमा गाऔं।</p>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixt57IaRnd-k0_Ax9OPuTqreZTprZpMj9zLFVCTDBSWNvXiDJN5DeVBdNv-9taPwJbaPBUxQ_fR_iLweLzjljNkbrHkx_tgQPVBe-0Ph_S-1a9mW4gx0gN-sX6HLZaECwRM60eityjG-B3/w640/5.jpg" alt="हितोपदेश"/>
+        <div class="post-body">
+          <span class="post-tag">बाइबल वचन</span>
+          <h3 class="post-title">हितोपदेश १५:१ — नम्र उत्तर</h3>
+          <p class="post-excerpt">"A soft answer turneth away wrath: but grievous words stir up anger." नम्र उत्तरले क्रोधलाई शान्त गर्छ।</p>
+          <p class="post-meta" style="margin-bottom:14px;">अगस्त २०२१</p>
+          <a href="https://fattepurchurch.blogspot.com/2021/08/proverbs-151-soft-answer-turneth-away.html" target="_blank" class="post-link">पूरा पढ्नुहोस् →</a>
         </div>
-        <div class="service-card fade-up">
-          <div class="icon">🙏</div>
-          <h3>Prayer &amp; Fellowship</h3>
-          <div class="service-info-row">
-            <span class="si-icon">✉</span>
-            <div class="si-text">
-              <strong>onlinetncgroup@gmail.com</strong>
-              Send prayer requests
-            </div>
-          </div>
-          <div class="service-info-row">
-            <span class="si-icon">📞</span>
-            <div class="si-text">
-              <strong>080-4180-4463</strong>
-              Pastor Prakash Granja
-            </div>
-          </div>
-          <div class="service-info-row">
-            <span class="si-icon">📘</span>
-            <div class="si-text">Follow us on Facebook &amp; YouTube</div>
-          </div>
-          <p class="np-note nepali">प्रार्थनाको लागि हामीलाई सम्पर्क गर्नुहोस् — प्रभु येशूको नाममा सँगै प्रार्थना गरौं।</p>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0FPrsmcsMViEtsP5jGL229cHHwq-0pcRKb3kDb6aq3S0_JMe34J9AEs-XrlarcAXXyhlWRdcBv1sfmim3R1X6QA76P68FpqpWoha__rzLMYqKNoGKrF0AWq_MiDmEv4L3iiJtn8FzlOjS/w640/8.jpg" alt="मर्कूस"/>
+        <div class="post-body">
+          <span class="post-tag">सुसमाचार</span>
+          <h3 class="post-title">मर्कूस १६:१५ — सारा संसारमा जानुहोस्</h3>
+          <p class="post-excerpt">"Go ye into all the world, and preach the gospel to every creature." — प्रभु येशूको आदेश।</p>
+          <p class="post-meta" style="margin-bottom:14px;">अगस्त २०२१</p>
+          <a href="https://fattepurchurch.blogspot.com/2021/08/and-he-said-unto-them-go-ye-into-all.html" target="_blank" class="post-link">पूरा पढ्नुहोस् →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BIBLE VERSES -->
+<section class="verses-banner" id="verses">
+  <div class="container">
+    <p class="section-label" style="text-align:center;">पवित्र शास्त्र</p>
+    <h2 class="section-title">बाइबल वचनहरु</h2>
+    <div class="divider"></div>
+    <div class="verses-grid">
+      <div class="verse-card">
+        <span class="verse-ref">१ शमूएल १६:७</span>
+        <p class="verse-text">"परमप्रभुले मानिसले झैँ हेर्नुहुन्न। मानिसले बाहिरी रूप हेर्छ, तर परमप्रभुले मनको भित्री भाग हेर्नुहुन्छ।"</p>
+      </div>
+      <div class="verse-card">
+        <span class="verse-ref">हिब्रू १०:२५</span>
+        <p class="verse-text">"हामीचाहिँ एकसाथ भेला हुन नछोडौं। तर प्रभुको दिन नजिक आइरहेको तिमीहरूले देखेका हुनाले एउटाले अर्कालाई प्रोत्साहन दिनुहोस्।"</p>
+      </div>
+      <div class="verse-card">
+        <span class="verse-ref">१ पत्रुस ३:९</span>
+        <p class="verse-text">"खराबीको बदला खराबी नगर्ने अथवा अपमानको बदला अपमान नदिने, बरु त्यसको सट्टामा आशिष् दिने होओ।"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <p class="section-label">फोटो ग्यालरी</p>
+    <h2 class="section-title">मण्डलीका क्षणहरु</h2>
+    <div class="divider"></div>
+    <div class="gallery-grid">
+      <div class="gallery-item big">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w640/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg" alt="फत्तेपुर, भाग्लपुर र गाईघाट मण्डली"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQr-KU9ss_KrUppbVtC-V6z3n5R0ONlkVCDDwlEjjM-UGIdMg9e9570Xr8s0BkzyZ96zF7iIY8rj2_FpZBHpA92HwvyEvE1f3VgJ_6RjEEOhLO1ukhXqGo8e-DsDxFPk1mVY3t0vt45GpE8EIrft6bRVbZMZAXnPMXCsGc_2JXYsIqIqe2g87GwTFuOg/w640/322192779_548497680490541_5398303754353494027_n.jpg" alt="बप्तिस्मा"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0FPrsmcsMViEtsP5jGL229cHHwq-0pcRKb3kDb6aq3S0_JMe34J9AEs-XrlarcAXXyhlWRdcBv1sfmim3R1X6QA76P68FpqpWoha__rzLMYqKNoGKrF0AWq_MiDmEv4L3iiJtn8FzlOjS/w640/8.jpg" alt="सन्देश"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section class="yt-section" id="youtube">
+  <div class="container">
+    <!-- Church Info Block -->
+    <div style="text-align:center; max-width:680px; margin:0 auto 56px;">
+      <p class="section-label" style="text-align:center;">हाम्रो मण्डली</p>
+      <h2 class="section-title" style="text-align:center;">फत्तेपुर मण्डलीबारे थोरै जानकारी</h2>
+      <div class="divider" style="margin:18px auto 28px;"></div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; text-align:left; margin-bottom:8px;">
+        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">स्थापना</div>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">बि.सं. २०३७ (सन् १९८०)</div>
+        </div>
+        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">आराधना समय</div>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">शनिबार बिहान ८:३० बजे</div>
+        </div>
+        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">स्थान</div>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">फत्तेपुर, नेपाल</div>
+        </div>
+        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">सहयोगी मण्डलीहरु</div>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:15px;">भाग्लपुर र गाईघाट मण्डली</div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ABOUT (HOME) -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text fade-up">
-          <span class="label">Who We Are · हाम्रो बारेमा</span>
-          <h2>A Community Built on<br>God's Word &amp; Love</h2>
-          <div class="gold-line" style="margin: 16px 0;"></div>
-          <p>Tokyo Nepali Church is a welcoming, Bible-believing Christian fellowship in Tokyo, Japan — bringing together the Nepali community through worship, prayer, the Word, and love.</p>
-          <div class="np-block nepali">
-            टोक्यो नेपाली चर्च टोक्योमा रहेको ख्रीष्ट-केन्द्रित ख्रीष्टियन संगति हो। हामी बाइबलमा आधारित आराधना, प्रार्थना र परमेश्वरको पवित्र वचनमा एकै मनले सहभागी हुन्छौं। हामी त्रियेक परमेश्वर — पिता परमेश्वर, पुत्र प्रभु येशू ख्रीष्ट र पवित्र आत्मामा दृढ विश्वास राख्छौं। सबैलाई हार्दिक स्वागत छ।
-          </div>
-          <div class="about-stats">
-            <div class="stat-box">
-              <span class="num">Sun</span>
-              <span class="desc">Weekly Worship Service</span>
-            </div>
-            <div class="stat-box">
-              <span class="num">TKY</span>
-              <span class="desc">Heart of Tokyo</span>
-            </div>
-            <div class="stat-box">
-              <span class="num">NP+</span>
-              <span class="desc">Nepali Community</span>
-            </div>
-            <div class="stat-box">
-              <span class="num">All</span>
-              <span class="desc">Are Welcome Here</span>
-            </div>
-          </div>
-          <div style="margin-top:28px;">
-            <a href="#" class="btn btn-primary" onclick="showPage('about')">Learn More About Us →</a>
-          </div>
-        </div>
-        <div class="about-image fade-up">
-          <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&amp;q=80" alt="Church worship service">
-          <div class="img-badge">
-            <span>✝</span>
-            Bible-Believing<br>Christ-Centered
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERMONS PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="label">Watch &amp; Listen · सुन्नुहोस्</span>
-        <h2>Latest Sermons / हालका सन्देशहरू</h2>
-        <div class="gold-line"></div>
-        <p>Watch our recent messages from Tokyo Nepali Church</p>
-        <p class="nepali nepali-sub">हाम्रा हालका सन्देशहरू YouTube मा हेर्नुहोस्</p>
-      </div>
-      <div class="sermons-grid">
-        <div class="sermon-card fade-up">
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLrandomTNC1" title="Tokyo Nepali Church Sermon" allowfullscreen="true" loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <span class="tag">Sunday Sermon</span>
-            <h3>Sunday Message — आइतबारको सन्देश</h3>
-            <p>Tokyo Nepali Church · टोक्यो नेपाली चर्च</p>
-          </div>
-        </div>
-        <div class="sermon-card fade-up">
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLrandomTNC2" title="Bible Teaching" allowfullscreen="true" loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <span class="tag">Bible Teaching</span>
-            <h3>Bible Study — बाइबल शिक्षा</h3>
-            <p>Tokyo Nepali Church · टोक्यो नेपाली चर्च</p>
-          </div>
-        </div>
-        <div class="sermon-card fade-up">
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLrandomTNC3" title="Special Message" allowfullscreen="true" loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <span class="tag">Special Message</span>
-            <h3>Special Program — विशेष कार्यक्रम</h3>
-            <p>Tokyo Nepali Church · टोक्यो नेपाली चर्च</p>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a href="#" class="btn btn-primary" onclick="showPage('sermons')">View All Sermons →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- EVENTS -->
-  <section class="section section-alt" id="events-home">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="label">Coming Up · आगामी कार्यक्रम</span>
-        <h2>Upcoming Events</h2>
-        <div class="gold-line"></div>
-        <p>Join us for these upcoming programs and fellowships</p>
-      </div>
-      <div class="events-grid">
-        <div class="event-card fade-up">
-          <div class="date-block">
-            <span class="day">☀</span>
-            <span class="month">Every</span>
-          </div>
-          <div class="event-info">
-            <h3>Sunday Worship Service</h3>
-            <p>📍 ICBF Tokyochuo Church</p>
-            <p>🕐 1:00 PM – 3:00 PM</p>
-            <p class="nepali" style="font-size:12px; color:var(--text-light); margin-top:6px;">प्रत्येक आइतबार</p>
-            <span class="event-badge">Weekly</span>
-          </div>
-        </div>
-        <div class="event-card fade-up">
-          <div class="date-block">
-            <span class="day">🌟</span>
-            <span class="month">Every</span>
-          </div>
-          <div class="event-info">
-            <h3>Youth Fellowship</h3>
-            <p>📍 Same building</p>
-            <p>🕒 3:15 PM – 4:30 PM</p>
-            <p class="nepali" style="font-size:12px; color:var(--text-light); margin-top:6px;">युवा संगति</p>
-            <span class="event-badge">Weekly</span>
-          </div>
-        </div>
-        <div class="event-card fade-up">
-          <div class="date-block">
-            <span class="day">🎉</span>
-            <span class="month">TBA</span>
-          </div>
-          <div class="event-info">
-            <h3>Special Church Event</h3>
-            <p>📍 ICBF Tokyochuo Church</p>
-            <p>Details to be announced</p>
-            <p class="nepali" style="font-size:12px; color:var(--text-light); margin-top:6px;">विशेष कार्यक्रम — जानकारी आउँदैछ</p>
-            <span class="event-badge">Coming Soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="label">Our Community · हाम्रो संगति</span>
-        <h2>Church Gallery</h2>
-        <div class="gold-line"></div>
-        <p>Moments of worship, fellowship, and community</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&amp;q=80" alt="Worship service">
-          <div class="overlay"><span>🔍</span></div>
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&amp;q=80" alt="Fellowship">
-          <div class="overlay"><span>🔍</span></div>
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&amp;q=80" alt="Prayer">
-          <div class="overlay"><span>🔍</span></div>
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1544961371-516024f8e267?w=800&amp;q=80" alt="Community">
-          <div class="overlay"><span>🔍</span></div>
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&amp;q=80" alt="Events">
-          <div class="overlay"><span>🔍</span></div>
-        </div>
-        <div class="gallery-item fade-up">
-          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&amp;q=80" alt="Youth">
-          <div class="overlay"><span>🔍</span></div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:36px;">
-        <a href="#" class="btn btn-primary" onclick="showPage('gallery')">View Full Gallery →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section class="section map-section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="label">Find Us · हामीलाई भेट्नुहोस्</span>
-        <h2>How to Find Us</h2>
-        <div class="gold-line"></div>
-        <p style="color:rgba(255,255,255,0.65)">Near Takadanobaba Station, Tokyo · टाकादानोबाबा स्टेशन नजिक — टोक्यो, जापान</p>
-      </div>
-      <div class="map-wrap fade-up">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1978899823647!2d139.70573087586985!3d35.71251377258052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d50d87b69ef%3A0x7c42dde80e4e63f7!2sTakadanobaba%20Station!5e0!3m2!1sen!2sjp!4v1700000000000!5m2!1sen!2sjp"
-          allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tokyo Nepali Church Location">
-        </iframe>
-      </div>
-      <div class="map-info fade-up">
-        <div class="map-detail">
-          <div class="mi-icon">📍</div>
-          <div>
-            <strong>ICBF Tokyochuo Church</strong>
-            ICBF東京中央チャーチ · Near Takadanobaba Station
-          </div>
-        </div>
-        <div class="map-detail">
-          <div class="mi-icon">🚉</div>
-          <div>
-            <strong>Takadanobaba Station</strong>
-            JR Yamanote Line · Tokyo
-          </div>
-        </div>
-        <a href="https://maps.google.com/?q=Takadanobaba+Station+Tokyo" target="_blank" class="btn btn-gold">
-          📍 Get Directions
+    <div class="yt-inner">
+      <div class="yt-text">
+        <p class="section-label">हाम्रो च्यानल</p>
+        <h2 class="section-title">YouTube मा हेर्नुहोस्</h2>
+        <div class="divider"></div>
+        <p>
+          फत्तेपुर मण्डलीका आराधना, सन्देश र विशेष कार्यक्रमहरु
+          हाम्रो YouTube च्यानलमा हेर्न सकिन्छ। Subscribe गर्नुहोस्
+          र नयाँ भिडियोहरुको सूचना पाउनुहोस्।
+        </p>
+        <p style="font-size:14px; color:var(--gray); margin-bottom:24px; font-style:italic;">
+          "संगतिको तृष्णा" — Ps. Gambhirman Rai द्वारा सन्देश
+        </p>
+        <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" class="yt-link">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          YouTube च्यानल हेर्नुहोस्
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT PREVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="label">Reach Out · सम्पर्क</span>
-        <h2>Contact Us / सम्पर्क गर्नुहोस्</h2>
-        <div class="gold-line"></div>
+      <div class="yt-embed">
+        <iframe width="1059" height="595" src="https://www.youtube.com/embed/bDbBCDHMcZo" title="संगतिको तृष्णा (Desire for Fellowship) | Ps. Gambhirman Rai | Fattepur Church Nepal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="contact-grid">
-        <div class="contact-info fade-up">
-          <h3>Get In Touch</h3>
-          <p class="np-sub nepali">हामीसँग सम्पर्क गर्न तलका माध्यमहरू प्रयोग गर्नुहोस्।</p>
-          <div class="contact-row">
-            <div class="cr-icon">👨‍💼</div>
-            <div>
-              <h4>Pastor</h4>
-              <p>Prakash Granja</p>
-            </div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">📞</div>
-            <div>
-              <h4>Phone</h4>
-              <p><a href="tel:+818041804463">080-4180-4463</a></p>
-            </div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">✉</div>
-            <div>
-              <h4>Email</h4>
-              <p><a href="mailto:onlinetncgroup@gmail.com">onlinetncgroup@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">📍</div>
-            <div>
-              <h4>Location</h4>
-              <p>ICBF Tokyochuo Church, near Takadanobaba Station, Tokyo</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-btn fb" target="_blank">📘 Facebook</a>
-            <a href="https://www.youtube.com/@TokyoNepaliChurchJapan" class="social-btn yt" target="_blank">▶ YouTube</a>
-            <a href="#" class="social-btn tk" target="_blank">♪ TikTok</a>
-          </div>
-        </div>
-        <div class="contact-visual fade-up">
-          <div class="cv-icon">🙏</div>
-          <h3>We'd Love to See You!</h3>
-          <p>Every Sunday you are warmly invited to join our worship service, prayer, and fellowship.</p>
-          <div class="cv-np nepali">
-            प्रत्येक आइतबार हामी तपाईंलाई प्रेमले स्वागत गर्दछौं। बाइबलमा आधारित आराधना, प्रार्थना र परमेश्वरको पवित्र वचनमा सँगै सहभागी हौं। प्रभु येशू ख्रीष्टको प्रेम सबैका लागि हो — यहाँ आउनुहोस्।
-          </div>
-          <div class="cv-pastor">
-            <strong>Pastor Prakash Granja</strong>
-            <span>Tokyo Nepali Church (TNC)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div><!-- end home page -->
-
-<!-- ========================= ABOUT PAGE ========================= -->
-<div id="page-about" class="page">
-  <div class="page-hero">
-    <div class="container">
-      <span class="label" style="color:var(--gold-light);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">हाम्रो बारेमा</span>
-      <h1>About Tokyo Nepali Church</h1>
-      <div class="gold-line"></div>
-      <p>A Bible-Believing, Christ-Centered Fellowship in Tokyo, Japan</p>
     </div>
   </div>
-  <section class="section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <span class="label">Our Story</span>
-          <h2>Who We Are</h2>
-          <div class="gold-line" style="margin:14px 0;"></div>
-          <p>Tokyo Nepali Church (TNC) is an independent, Bible-believing, Christ-centered Christian fellowship serving the Nepali community in Tokyo, Japan. We believe in the Holy Trinity — Father, Son, and Holy Spirit.</p>
-          <p>We exist to worship God, grow together in His Word, and reach out to every Nepali living in Japan with the love of Jesus Christ. All are welcome — believers, seekers, families, youth, and new believers.</p>
-          <div class="np-block nepali">
-            टोक्यो नेपाली चर्च (TNC) जापानको टोक्योमा रहेको स्वतन्त्र, बाइबल-आधारित, ख्रीष्ट-केन्द्रित ख्रीष्टियन संगति हो। हामी त्रियेक परमेश्वर — पिता परमेश्वर, प्रभु येशू ख्रीष्ट र पवित्र आत्मामा पूर्ण विश्वास राख्छौं। जापानमा रहेका सबै नेपालीहरूलाई उद्धारकर्ता प्रभु येशू ख्रीष्टको सुसमाचार र प्रेम पुर्‍याउन हामी प्रतिबद्ध छौं।
-          </div>
-          <span class="label" style="margin-top:28px; display:block;">Our Vision</span>
-          <p>To be a spiritual home for every Nepali in Japan — a place of worship, growth, prayer, and genuine Christian community rooted in the love of Jesus.</p>
-          <div class="np-block nepali">
-            जापानमा रहेका प्रत्येक नेपालीको आत्मिक घर बन्नु — जहाँ बाइबलमा आधारित आराधना, आत्मिक बृद्धि, प्रार्थना र प्रभु येशू ख्रीष्टको प्रेममा जरा गाडेको सच्चा ख्रीष्टियन संगति हुन्छ।
-          </div>
-          <span class="label" style="margin-top:28px; display:block;">Our Mission</span>
-          <p>To preach the Gospel, make disciples, build families in faith, and glorify God through worship, service, and the power of the Holy Spirit.</p>
-          <div class="np-block nepali">
-            प्रभु येशूको सुसमाचार प्रचार गर्नु, शिष्यहरू बनाउनु, परिवारहरूलाई विश्वासमा निर्माण गर्नु र पवित्र आत्माको सामर्थ्यमा आराधना, प्रार्थना र सेवाद्वारा परमेश्वर पितालाई महिमा दिनु।
-          </div>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1438232992991-995b671e5ade?w=700&amp;q=80" alt="Worship" style="width:100%;height:380px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow-lg);margin-bottom:24px;">
-          <div style="background:var(--primary);color:var(--white);border-radius:16px;padding:28px;">
-            <h3 style="color:var(--gold-light);margin-bottom:16px;font-family:'Montserrat',sans-serif;">Our Beliefs</h3>
-            <ul style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
-              <li style="display:flex;gap:10px;"><span>✦</span> We believe in one God — Father, Son, Holy Spirit</li>
-              <li style="display:flex;gap:10px;"><span>✦</span> The Bible is the inspired Word of God</li>
-              <li style="display:flex;gap:10px;"><span>✦</span> Salvation through faith in Jesus Christ alone</li>
-              <li style="display:flex;gap:10px;"><span>✦</span> The resurrection of Jesus Christ</li>
-              <li style="display:flex;gap:10px;"><span>✦</span> Baptism by immersion in water</li>
-              <li style="display:flex;gap:10px;"><span>✦</span> The power of the Holy Spirit</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="belief-cards" style="margin-top:70px;">
-        <div class="belief-card">
-          <div class="bi">👨‍👩‍👧‍👦</div>
-          <h3>Family-Friendly</h3>
-          <p>A warm, welcoming space for every family — children, youth, adults, and elders.</p>
-          <p class="np nepali">परिवार अनुकूल — बालबालिका, युवा, वयस्क र वृद्धहरू सबैको लागि।</p>
-        </div>
-        <div class="belief-card">
-          <div class="bi">📖</div>
-          <h3>Bible-Based</h3>
-          <p>Every sermon, teaching, and program is grounded in the Word of God.</p>
-          <p class="np nepali">बाइबलमा आधारित — परमेश्वरको वचनमा सबै कुरा आधारित।</p>
-        </div>
-        <div class="belief-card">
-          <div class="bi">✝</div>
-          <h3>Christ-Centered</h3>
-          <p>Jesus Christ is the foundation, head, and center of our church and lives.</p>
-          <p class="np nepali">ख्रीष्ट-केन्द्रित — येशू ख्रीष्ट हाम्रो चर्च र जीवनको आधार।</p>
-        </div>
-        <div class="belief-card">
-          <div class="bi">🇯🇵🇳🇵</div>
-          <h3>Nepali Community</h3>
-          <p>Serving Nepalis across Tokyo and all of Japan with the Gospel and fellowship.</p>
-          <p class="np nepali">सम्पूर्ण जापानका नेपालीहरूलाई सुसमाचार र संगतिद्वारा सेवा।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+</section>
 
-<!-- ========================= SERMONS PAGE ========================= -->
-<div id="page-sermons" class="page">
-  <div class="page-hero">
-    <div class="container">
-      <span class="label" style="color:var(--gold-light);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Watch &amp; Listen</span>
-      <h1>Sermons / सन्देशहरू</h1>
-      <div class="gold-line"></div>
-      <p>Watch our Sunday sermons, Bible teachings, and special messages</p>
-    </div>
-  </div>
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Sunday Sermons</span>
-        <h2>आइतबारका सन्देशहरू</h2>
-        <div class="gold-line"></div>
-      </div>
-      <div class="sermons-grid">
-        <div class="sermon-card">
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLrandomTNC1" title="Sunday Sermon" allowfullscreen="true" loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <span class="tag">Sunday Sermon</span>
-            <h3>Sunday Message — आइतबारको सन्देश</h3>
-            <p>Tokyo Nepali Church Japan</p>
-          </div>
-        </div>
-        <div class="sermon-card">
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLrandomTNC2" title="Bible Teaching" allowfullscreen="true" loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <span class="tag">Bible Teaching</span>
-            <h3>बाइबल शिक्षा — Bible Study</h3>
-            <p>Tokyo Nepali Church Japan</p>
-          </div>
-        </div>
-        <div class="sermon-card">
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLrandomTNC3" title="Special Message" allowfullscreen="true" loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <span class="tag">Special Message</span>
-            <h3>Special Program — विशेष कार्यक्रम</h3>
-            <p>Tokyo Nepali Church Japan</p>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:40px;padding:32px;background:var(--gold-pale);border-radius:16px;border:1px solid var(--gold);">
-        <p style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--primary);font-size:17px;margin-bottom:8px;">📺 Subscribe to our YouTube Channel</p>
-        <p class="nepali" style="color:var(--text-body);font-size:14px;margin-bottom:20px;">हाम्रो YouTube च्यानल सब्स्क्राइब गर्नुहोस् र नयाँ सन्देशहरू सबैभन्दा पहिले पाउनुहोस्।</p>
-        <a href="https://www.youtube.com/@TokyoNepaliChurchJapan" target="_blank" class="btn btn-primary">▶ Tokyo Nepali Church Japan — YouTube</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ========================= EVENTS PAGE ========================= -->
-<div id="page-events" class="page">
-  <div class="page-hero">
-    <div class="container">
-      <span class="label" style="color:var(--gold-light);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">आगामी कार्यक्रम</span>
-      <h1>Events / कार्यक्रमहरू</h1>
-      <div class="gold-line"></div>
-      <p>Stay updated with all upcoming church events and programs</p>
-    </div>
-  </div>
-  <section class="section">
-    <div class="container">
-      <div class="events-grid">
-        <div class="event-card">
-          <div class="date-block"><span class="day">☀</span><span class="month">Every</span></div>
-          <div class="event-info">
-            <h3>Sunday Worship Service</h3>
-            <p>📍 ICBF Tokyochuo Church</p>
-            <p>🕐 1:00 PM – 3:00 PM</p>
-            <p>🚉 Near Takadanobaba Station</p>
-            <p class="nepali" style="font-size:12px;margin-top:8px;color:var(--text-light);">प्रत्येक आइतबार — आराधना, प्रार्थना र परमेश्वरको वचन</p>
-            <span class="event-badge">Weekly · साप्ताहिक</span>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="date-block"><span class="day">🌟</span><span class="month">Every</span></div>
-          <div class="event-info">
-            <h3>Youth Fellowship</h3>
-            <p>📍 Same building</p>
-            <p>🕒 3:15 PM – 4:30 PM</p>
-            <p>After Sunday worship</p>
-            <p class="nepali" style="font-size:12px;margin-top:8px;color:var(--text-light);">युवा संगति — आराधना पछि</p>
-            <span class="event-badge">Weekly · साप्ताहिक</span>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="date-block"><span class="day">🎉</span><span class="month">TBA</span></div>
-          <div class="event-info">
-            <h3>Special Church Event</h3>
-            <p>📍 ICBF Tokyochuo Church</p>
-            <p>Details coming soon</p>
-            <p class="nepali" style="font-size:12px;margin-top:8px;color:var(--text-light);">विशेष कार्यक्रम — जानकारी आउँदैछ</p>
-            <span class="event-badge">Coming Soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ========================= GALLERY PAGE ========================= -->
-<div id="page-gallery" class="page">
-  <div class="page-hero">
-    <div class="container">
-      <span class="label" style="color:var(--gold-light);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">हाम्रो संगति</span>
-      <h1>Gallery / ग्यालेरी</h1>
-      <div class="gold-line"></div>
-      <p>Moments of worship, fellowship, events, and community</p>
-    </div>
-  </div>
-  <section class="section">
-    <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&amp;q=80" alt="Worship"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&amp;q=80" alt="Fellowship"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&amp;q=80" alt="Prayer"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544961371-516024f8e267?w=800&amp;q=80" alt="Community"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&amp;q=80" alt="Events"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&amp;q=80" alt="Youth"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1438232992991-995b671e5ade?w=400&amp;q=80" alt="Worship service"><div class="overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&amp;q=80" alt="Church"><div class="overlay"><span>🔍</span></div></div>
-      </div>
-      <div style="text-align:center;margin-top:32px;padding:24px;background:var(--gold-pale);border-radius:14px;">
-        <p style="color:var(--text-body);font-size:14px;">📸 Replace the above images with real Tokyo Nepali Church photos for best results.</p>
-        <p class="nepali" style="color:var(--text-light);font-size:13px;margin-top:6px;">वास्तविक चर्चका फोटोहरू राख्दा वेबसाइट अझ राम्रो देखिन्छ।</p>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ========================= PRAYER PAGE ========================= -->
-<div id="page-prayer" class="page">
-  <div class="page-hero">
-    <div class="container">
-      <span class="label" style="color:var(--gold-light);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">🙏 प्रार्थना</span>
-      <h1>Prayer Request</h1>
-      <div class="gold-line"></div>
-      <p>We believe in the power of prayer — send us your requests</p>
-    </div>
-  </div>
-  <section class="section">
-    <div class="container">
-      <div class="prayer-box">
-        <div class="pb-icon">🙏</div>
-        <h2>Prayer Request</h2>
-        <p class="np-title nepali">प्रार्थनाको निवेदन</p>
-        <div class="verse">
-          <strong>Philippians 4:6 —</strong> "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God."
-        </div>
-        <div class="verse nepali">
-          <strong>फिलिप्पी ४:६ —</strong> "कुनै कुराले पनि तिमीहरू चिन्ताकुल नहोऊ, तर सबै परिस्थितिमा प्रार्थना र बिन्तीद्वारा धन्यवाद सहित परमेश्वर अगाडि आफ्ना माग पेस गर।"
-        </div>
-        <p>We would love to pray with you. Send your prayer requests through our <strong>Facebook page</strong> and our pastoral team will pray for you.</p>
-        <p class="nepali" style="font-size:14px;color:var(--text-light);margin-top:8px;">
-          हामी प्रभु येशूको नाममा तपाईंको लागि प्रार्थना गर्न तयार छौं। कृपया आफ्नो प्रार्थनाको निवेदन हाम्रो <strong>Facebook पेज</strong> मा पठाउनुहोस् — परमेश्वर तपाईंको प्रार्थना सुन्नुहुन्छ।
+<!-- CONNECT -->
+<section class="connect-section" id="connect">
+  <div class="container">
+    <div class="connect-grid">
+      <div class="connect-info">
+        <p class="section-label">सम्पर्क</p>
+        <h2 class="section-title">हामीसँग जोडिनुहोस्</h2>
+        <div class="divider"></div>
+        <p>
+          यदि तपाईँ हाम्रो मण्डलीमा आउन चाहनुहुन्छ वा थप जानकारी लिन
+          चाहनुहुन्छ भने हामीलाई सम्पर्क गर्नुहोस्। हामी सधैँ स्वागत
+          गर्न तयार छौं।
         </p>
-        <div style="margin-top:32px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="#" target="_blank" class="btn btn-primary">📘 Send via Facebook</a>
-          <a href="mailto:onlinetncgroup@gmail.com" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">✉ Email Us</a>
+        <div class="connect-detail">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>फत्तेपुर, नेपाल</span>
         </div>
-        <div style="margin-top:28px;padding:20px;background:var(--off-white);border-radius:12px;font-size:13px;color:var(--text-light);">
-          <p>📞 Pastor Prakash Granja — <strong>080-4180-4463</strong></p>
-          <p>✉ onlinetncgroup@gmail.com</p>
+        <div class="connect-detail">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="3"/></svg>
+          <span>शनिबार बिहान ८:३० बजे<br/>आराधना सेवा</span>
+        </div>
+        <div class="connect-detail">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <span>facebook.com/FattepurChurchNepal</span>
+        </div>
+
+        <div class="social-row">
+          <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" class="social-btn fb">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" class="social-btn yt">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            YouTube
+          </a>
+          <a href="https://www.instagram.com/fattepurchurch/" target="_blank" class="social-btn ig">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Instagram
+          </a>
         </div>
       </div>
-    </div>
-  </section>
-</div>
 
-<!-- ========================= CONTACT PAGE ========================= -->
-<div id="page-contact" class="page">
-  <div class="page-hero">
-    <div class="container">
-      <span class="label" style="color:var(--gold-light);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">सम्पर्क</span>
-      <h1>Contact Us</h1>
-      <div class="gold-line"></div>
-      <p>We'd love to hear from you — reach out anytime</p>
+      <div class="connect-form-wrap">
+        <h3>सन्देश पठाउनुहोस्</h3>
+        <div class="form-group">
+          <label>तपाईँको नाम</label>
+          <input type="text" placeholder="पूरा नाम लेख्नुहोस्"/>
+        </div>
+        <div class="form-group">
+          <label>इमेल वा फोन</label>
+          <input type="text" placeholder="सम्पर्क नम्बर वा इमेल"/>
+        </div>
+        <div class="form-group">
+          <label>सन्देश</label>
+          <textarea placeholder="यहाँ आफ्नो कुरा लेख्नुहोस्..."></textarea>
+        </div>
+        <button class="btn-submit">सन्देश पठाउनुहोस्</button>
+      </div>
     </div>
   </div>
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Reach Out to Us</h3>
-          <p class="np-sub nepali">हामीसँग सम्पर्क गर्नुहोस् — प्रभु येशूको नाममा हामी सुन्न र सहयोग गर्न सधैं तयार छौं।</p>
-          <div class="contact-row">
-            <div class="cr-icon">👨‍💼</div>
-            <div><h4>Pastor</h4><p>Prakash Granja</p></div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">📞</div>
-            <div><h4>Phone</h4><p><a href="tel:+818041804463">080-4180-4463</a></p></div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">✉</div>
-            <div><h4>Email</h4><p><a href="mailto:onlinetncgroup@gmail.com">onlinetncgroup@gmail.com</a></p></div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">📍</div>
-            <div>
-              <h4>Location</h4>
-              <p>ICBF Tokyochuo Church (ICBF東京中央チャーチ)<br>Near Takadanobaba Station, Tokyo</p>
-            </div>
-          </div>
-          <div class="contact-row">
-            <div class="cr-icon">🕐</div>
-            <div>
-              <h4>Service Times</h4>
-              <p>Sunday: 1:00 PM – 3:00 PM<br>Youth: 3:15 PM – 4:30 PM</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-btn fb" target="_blank">📘 Facebook</a>
-            <a href="https://www.youtube.com/@TokyoNepaliChurchJapan" class="social-btn yt" target="_blank">▶ YouTube</a>
-            <a href="#" class="social-btn tk" target="_blank">♪ TikTok</a>
-          </div>
-        </div>
-        <div class="contact-visual">
-          <div class="cv-icon">⛪</div>
-          <h3>Tokyo Nepali Church</h3>
-          <p>टोक्यो नेपाली चर्च</p>
-          <p>ICBF Tokyochuo Church<br>Near Takadanobaba Station, Tokyo, Japan</p>
-          <div class="cv-np nepali">
-            प्रत्येक आइतबार दिउँसो १:०० बजेदेखि ३:०० बजेसम्म आराधनामा सहभागी हुनुहोस्। युवाहरूको लागि ३:१५ बजेदेखि ४:३० बजेसम्म संगति हुन्छ। प्रभु येशू ख्रीष्टमा सबैलाई स्वागत छ।
-          </div>
-          <div class="cv-pastor">
-            <strong>Pastor Prakash Granja</strong>
-            <span>📞 080-4180-4463</span>
-          </div>
-          <div style="margin-top:20px;position:relative;z-index:1;">
-            <a href="https://maps.google.com/?q=Takadanobaba+Station+Tokyo" target="_blank" class="btn btn-gold" style="display:inline-flex;">📍 Get Directions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+</section>
 
-<!-- ========================= FOOTER ========================= -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo-wrap">
-          <div class="fi">✝</div>
-          <strong>Tokyo Nepali Church (TNC)</strong>
-        </div>
-        <p>A welcoming, Bible-believing, Christ-centered Nepali Christian fellowship in Tokyo, Japan.</p>
-        <p class="fn nepali">टोक्यो नेपाली चर्च — जापानमा बाइबलमा आधारित नेपाली ख्रीष्टियन संगति। प्रभु येशू ख्रीष्टमा सबैलाई हार्दिक स्वागत छ।</p>
+      <div class="footer-about">
+        <a href="#" class="logo" style="margin-bottom:16px;display:flex;">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24"><rect x="10" y="2" width="4" height="20" rx="1"/><rect x="2" y="8" width="20" height="4" rx="1"/></svg>
+          </div>
+          <div class="logo-text-wrap">
+            <div class="logo-ne" style="color:white;">फत्तेपुर मण्डली</div>
+            <div class="logo-en">Fattepur Church Nepal</div>
+          </div>
+        </a>
+        <p>परमेश्वरको वचन र सेवामा समर्पित। सबैलाई स्वागत छ — आउनुहोस् र परिवारको अंश बन्नुहोस्।</p>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#" onclick="showPage('home')">Home</a></li>
-          <li><a href="#" onclick="showPage('about')">About Us</a></li>
-          <li><a href="#" onclick="showPage('sermons')">Sermons</a></li>
-          <li><a href="#" onclick="showPage('events')">Events</a></li>
-          <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
-          <li><a href="#" onclick="showPage('prayer')">Prayer Request</a></li>
-          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-        </ul>
+        <h4>पृष्ठहरु</h4>
+        <a href="#hero">गृहपृष्ठ</a>
+        <a href="#about">हाम्रोबारे</a>
+        <a href="#posts">सन्देशहरु</a>
+        <a href="#verses">बाइबल वचन</a>
+        <a href="#gallery">ग्यालरी</a>
+        <a href="#connect">सम्पर्क</a>
       </div>
       <div class="footer-col">
-        <h4>Service Times</h4>
-        <div class="service-time">⛪ <div><strong style="color:var(--white)">Sunday Worship</strong><br>1:00 PM – 3:00 PM</div></div>
-        <div class="service-time">🌟 <div><strong style="color:var(--white)">Youth Fellowship</strong><br>3:15 PM – 4:30 PM</div></div>
-        <div style="margin-top:16px;font-size:13px;">
-          📍 ICBF Tokyochuo Church<br>
-          <span style="opacity:0.6;font-size:12px;">Near Takadanobaba Station, Tokyo</span>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="#" target="_blank">📘 Facebook Page</a></li>
-          <li><a href="https://www.youtube.com/@TokyoNepaliChurchJapan" target="_blank">▶ YouTube Channel</a></li>
-          <li><a href="#" target="_blank">♪ TikTok</a></li>
-          <li><a href="mailto:onlinetncgroup@gmail.com">✉ Email Us</a></li>
-          <li><a href="tel:+818041804463">📞 080-4180-4463</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Tokyo Nepali Church (TNC) · Tokyo, Japan · All Rights Reserved</p>
-      <div class="ft-social">
-        <a href="#" target="_blank" title="Facebook">📘</a>
-        <a href="https://www.youtube.com/@TokyoNepaliChurchJapan" target="_blank" title="YouTube">▶</a>
-        <a href="#" target="_blank" title="TikTok">♪</a>
+        <h4>सोशल मिडिया</h4>
+        <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank">Facebook</a>
+        <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/fattepurchurch/" target="_blank">Instagram</a>
+        <a href="https://fattepurchurch.blogspot.com" target="_blank">Blogspot</a>
       </div>
     </div>
   </div>
+  <div class="footer-bottom">
+    © २०८१ फत्तेपुर मण्डली नेपाल। सर्वाधिकार सुरक्षित। &nbsp;|&nbsp; स्थापना बि.सं. २०३७
+  </div>
 </footer>
 
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-// Page navigation
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + pageId).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // Update nav active state
-  document.querySelectorAll('.nav-links a[id^="nav-"]').forEach(a => a.classList.remove('active-page'));
-  const navEl = document.getElementById('nav-' + pageId);
-  if (navEl) navEl.classList.add('active-page');
-}
-
-// Mobile menu toggle
-function toggleMobile() {
-  const menu = document.getElementById('mobileMenu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  menu.style.flexDirection = 'column';
-}
-
-// Sticky nav on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('mainNav');
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// Fade-up animation on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-// Re-observe when page changes
-const pageObserver = new MutationObserver(() => {
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => observer.observe(el));
-});
-pageObserver.observe(document.body, { childList: true, subtree: true });
-</script>
 </body>
 </html>
