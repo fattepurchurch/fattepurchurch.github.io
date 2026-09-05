@@ -1077,7 +1077,7 @@
 </script>
 
 <script>
-  emailjs.init('YOUR_PUBLIC_KEY');
+  emailjs.init('0d0r2KvFf4EOBJlAB');
 
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -1091,7 +1091,7 @@
     status.style.display = 'none';
     status.textContent = '';
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#contact-form')
+    emailjs.sendForm('service_zliffjq', 'template_giwkgxj', '#contact-form')
       .then(function() {
         status.textContent = 'तपाईंको प्रार्थनाको विषय सफलतापूर्वक पठाइयो! धन्यवाद।';
         status.style.cssText = 'margin-top:12px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(196,154,42,.15); color:#7a5c00; border:1px solid var(--gold); display:block;';
