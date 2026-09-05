@@ -20,6 +20,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>फत्तेपुर मण्डली नेपाल — Fattepur Church Nepal</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
@@ -974,19 +975,22 @@
 
       <div class="connect-form-wrap">
         <h3>सन्देश पठाउनुहोस्</h3>
-        <div class="form-group">
-          <label>तपाईँको नाम</label>
-          <input type="text" placeholder="पूरा नाम लेख्नुहोस्"/>
-        </div>
-        <div class="form-group">
-          <label>इमेल वा फोन</label>
-          <input type="text" placeholder="सम्पर्क नम्बर वा इमेल"/>
-        </div>
-        <div class="form-group">
-          <label>सन्देश</label>
-          <textarea placeholder="यहाँ आफ्नो कुरा लेख्नुहोस्..."></textarea>
-        </div>
-        <button class="btn-submit">सन्देश पठाउनुहोस्</button>
+        <form id="contact-form">
+          <div class="form-group">
+            <label>तपाईँको नाम</label>
+            <input type="text" name="user_name" placeholder="पूरा नाम लेख्नुहोस्" required/>
+          </div>
+          <div class="form-group">
+            <label>इमेल वा फोन</label>
+            <input type="text" name="user_contact" placeholder="सम्पर्क नम्बर वा इमेल" required/>
+          </div>
+          <div class="form-group">
+            <label>सन्देश</label>
+            <textarea name="message" placeholder="यहाँ आफ्नो कुरा लेख्नुहोस्..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submit-btn">सन्देश पठाउनुहोस्</button>
+          <div id="form-status" style="margin-top:12px; font-size:14px; border-radius:4px;"></div>
+        </form>
       </div>
     </div>
   </div>
@@ -1069,6 +1073,37 @@
     if (!document.getElementById('siteSearch').contains(e.target)) {
       document.getElementById('searchResults').style.display = 'none';
     }
+  });
+</script>
+
+<script>
+  emailjs.init('YOUR_PUBLIC_KEY');
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submit-btn');
+    const status = document.getElementById('form-status');
+
+    // Sending state
+    btn.textContent = 'पठाउँदैछ...';
+    btn.disabled = true;
+    status.style.display = 'none';
+    status.textContent = '';
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#contact-form')
+      .then(function() {
+        status.textContent = 'तपाईंको प्रार्थनाको विषय सफलतापूर्वक पठाइयो! धन्यवाद।';
+        status.style.cssText = 'margin-top:12px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(196,154,42,.15); color:#7a5c00; border:1px solid var(--gold); display:block;';
+        document.getElementById('contact-form').reset();
+        btn.textContent = 'सन्देश पठाउनुहोस्';
+        btn.disabled = false;
+      }, function() {
+        status.textContent = 'सन्देश पठाउन सकिएन, कृपया पुनः प्रयास गर्नुहोस्।';
+        status.style.cssText = 'margin-top:12px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(220,38,38,.1); color:#b91c1c; border:1px solid #fca5a5; display:block;';
+        btn.textContent = 'सन्देश पठाउनुहोस्';
+        btn.disabled = false;
+      });
   });
 </script>
 </body>
