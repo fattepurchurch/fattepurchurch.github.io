@@ -622,6 +622,50 @@
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; }
     }
+    /* ──────────── HOW TO FIND US ──────────── */
+.findus-section {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+}
+.findus-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 56px;
+  align-items: start;
+}
+.findus-info { }
+.findus-info p { color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
+.findus-detail {
+  display: flex; gap: 12px; align-items: flex-start;
+  margin-bottom: 18px;
+}
+.findus-detail svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.findus-detail div { }
+.findus-detail strong { display: block; color: var(--navy); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.findus-detail span { color: var(--gray); font-size: 14px; line-height: 1.6; }
+.findus-directions {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 24px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 11px 22px;
+  border-radius: 4px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+  transition: background .2s;
+}
+.findus-directions:hover { background: var(--gold); color: var(--navy); }
+.findus-directions svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.findus-map iframe {
+  width: 100%; border-radius: 6px; display: block;
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+@media (max-width: 768px) {
+  .findus-inner { grid-template-columns: 1fr; gap: 32px; }
+}
   </style>
   <meta name="google-site-verification" content="NfuH460OtL4_jrKk4-gGBMEQsgZ5UaA38Sl_skEcvLw" />
 </head>
@@ -678,6 +722,7 @@
         </div>
       </div>
       <a href="#youtube" class="nav-link">भिडियो</a>
+      <a href="#findus" class="nav-link">हाम्रो स्थान</a>
       <a href="#connect" class="nav-link">सम्पर्क</a>
       <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" class="nav-cta">Facebook</a>
 
@@ -709,6 +754,7 @@
   <a href="#verses" onclick="document.getElementById('mobileNav').classList.remove('open')">बाइबल वचन</a>
   <a href="#youtube" onclick="document.getElementById('mobileNav').classList.remove('open')">भिडियो</a>
   <a href="#gallery" onclick="document.getElementById('mobileNav').classList.remove('open')">फोटो ग्यालरी</a>
+  <a href="#findus" onclick="document.getElementById('mobileNav').classList.remove('open')">हाम्रो स्थान</a>
   <a href="#connect" onclick="document.getElementById('mobileNav').classList.remove('open')">सम्पर्क</a>
 </div>
 
@@ -875,7 +921,53 @@
     </div>
   </div>
 </section>
+<!-- HOW TO FIND US -->
+<section class="findus-section" id="findus">
+  <div class="container">
+    <p class="section-label" style="text-align:center;">हाम्रो स्थान</p>
+    <h2 class="section-title" style="text-align:center;">हामीलाई कसरी भेट्ने</h2>
+    <div class="divider" style="margin:18px auto 48px;"></div>
+    <div class="findus-inner">
+      <div class="findus-info">
+        <p>फत्तेपुर मण्डलीमा स्वागत छ। तलको नक्सा र ठेगाना प्रयोग गरेर सजिलै हाम्रो चर्च सम्म आउन सक्नुहुन्छ।</p>
 
+        <div class="findus-detail">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>चर्चको ठेगाना</strong>
+            <span>फत्तेपुर मण्डली, फत्तेपुर,<br/>सुनसरी जिल्ला, नेपाल</span>
+          </div>
+        </div>
+
+        <div class="findus-detail">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <strong>आराधना समय</strong>
+            <span>शनिबार बिहान ८:३० बजे</span>
+          </div>
+        </div>
+
+        <div class="findus-detail">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div>
+            <strong>स्थान</strong>
+            <span>फत्तेपुर, नेपाल</span>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/kUn29cDjgsPA4jAZ6" target="_blank" class="findus-directions">
+          <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          Google Maps मा दिशा पाउनुहोस्
+        </a>
+      </div>
+
+      <div class="findus-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.5553329973873!2d86.93385887488856!3d26.72664916806279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef1f006d02aef1%3A0x7031c65d25484add!2sFattepur%20Church!5e0!3m2!1sen!2sjp!4v1789187570608!5m2!1sen!2sjp" width="600" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <!-- YOUTUBE -->
 <section class="yt-section" id="youtube">
   <div class="container">
@@ -1036,6 +1128,7 @@
 </footer>
 <script>
   const searchData = [
+    { title: "हाम्रो स्थान", section: "#findus", text: "फत्तेपुर मण्डली ठेगाना नक्सा location map how to find us" },
     { title: "गृहपृष्ठ", section: "#hero", text: "फत्तेपुर मण्डली नेपाल परमेश्वरको प्रेम र सेवामा समर्पित" },
     { title: "हाम्रोबारे", section: "#about", text: "फत्तेपुर मण्डली परिचय बि.सं. २०३७ स्थापना भाग्लपुर गाईघाट" },
     { title: "आराधना समय", section: "#about", text: "शनिबार बिहान ८:३० बजे आराधना सेवा" },
