@@ -2,44 +2,49 @@
 <html lang="ne">
 <head>
   <!-- SEO Meta Tags -->
-<meta name="description" content="फत्तेपुर मण्डली, नेपाल — बि.सं. २०३७ देखि परमेश्वरको सेवामा समर्पित। शनिबार बिहान ८:३० बजे आराधना। Fattepur Church Nepal."/>
-<meta name="keywords" content="Fattepur Church, फत्तेपुर मण्डली, Nepal Church, Fattepur Church Nepal, Christian Church Nepal"/>
-<meta name="author" content="Fattepur Church Nepal"/>
-<meta name="robots" content="index, follow"/>
+  <meta name="description" content="फत्तेपुर मण्डली, नेपाल — बि.सं. २०३७ देखि परमेश्वरको सेवामा समर्पित। शनिबार बिहान ८:३० बजे आराधना। Fattepur Church Nepal."/>
+  <meta name="keywords" content="Fattepur Church, फत्तेपुर मण्डली, Nepal Church, Fattepur Church Nepal, Christian Church Nepal"/>
+  <meta name="author" content="Fattepur Church Nepal"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="google-site-verification" content="NfuH460OtL4_jrKk4-gGBMEQsgZ5UaA38Sl_skEcvLw" />
 
-<!-- Open Graph (Facebook/Social share preview) -->
-<meta property="og:title" content="फत्तेपुर मण्डली, नेपाल — Fattepur Church Nepal"/>
-<meta property="og:description" content="बि.सं. २०३७ देखि परमेश्वरको सेवामा समर्पित। शनिबार बिहान ८:३० बजे आराधना।"/>
-<meta property="og:image" content="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png"/>
-<meta property="og:url" content="https://fattepurchurch.github.io"/>
-<meta property="og:type" content="website"/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="फत्तेपुर मण्डली, नेपाल — Fattepur Church Nepal"/>
+  <meta property="og:description" content="बि.सं. २०३७ देखि परमेश्वरको सेवामा समर्पित। शनिबार बिहान ८:३० बजे आराधना।"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png"/>
+  <meta property="og:url" content="https://fattepurchurch.github.io"/>
+  <meta property="og:type" content="website"/>
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://fattepurchurch.github.io"/>
-  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://fattepurchurch.github.io/"/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>फत्तेपुर मण्डली, नेपाल — Fattepur Church Nepal</title>
+
+  <!-- External Resources (Links corrected) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy:    #1a2744;
-      --gold:    #c49a2a;
+      --navy: #1a2744;
+      --gold: #c49a2a;
       --gold-lt: #e8c55a;
-      --cream:   #f7f4ef;
-      --white:   #ffffff;
-      --gray:    #6b7280;
+      --cream: #f7f4ef;
+      --white: #ffffff;
+      --gray: #6b7280;
       --gray-lt: #f0ede8;
-      --text:    #1c1c1c;
-      --border:  #d9d3c9;
+      --text: #1c1c1c;
+      --border: #d9d3c9;
     }
-
-    html { scroll-behavior: smooth; }
-
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 76px; /* Prevents sticky nav from covering headings */
+    }
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
@@ -47,6 +52,7 @@
       font-size: 16px;
       line-height: 1.7;
     }
+    body.no-scroll { overflow: hidden; }
 
     /* ──────────── TOP BAR ──────────── */
     .topbar {
@@ -72,10 +78,11 @@
       width: 26px; height: 26px;
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: 50%;
-      transition: border-color .2s, background .2s;
+      color: #cdd4e8;
+      transition: border-color .2s, background .2s, color .2s;
     }
-    .topbar-social a:hover { background: var(--gold); border-color: var(--gold); }
-    .topbar-social svg { width: 13px; height: 13px; fill: currentColor; }
+    .topbar-social a:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+    .topbar-social svg { width: 13px; height: 13px; fill: currentColor; stroke: currentColor; }
 
     /* ──────────── HEADER ──────────── */
     header {
@@ -99,12 +106,10 @@
     }
     .logo-icon {
       width: 48px; height: 48px;
-      background: var(--navy);
-      border-radius: 50%;
+      background: transparent;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .logo-icon svg { width: 26px; height: 26px; fill: var(--gold); }
     .logo-text-wrap { line-height: 1.2; }
     .logo-ne { font-family: 'Tiro Devanagari Hindi', serif; font-size: 17px; font-weight: 700; color: var(--navy); }
     .logo-en { font-size: 11px; letter-spacing: .04em; color: var(--gray); text-transform: uppercase; }
@@ -125,7 +130,8 @@
 
     /* Dropdown */
     .nav-item { position: relative; }
-    .nav-item:hover .dropdown { display: block; }
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown { display: block; }
     .dropdown {
       display: none;
       position: absolute; top: 100%; left: 0;
@@ -144,12 +150,11 @@
       color: var(--navy);
       text-decoration: none;
       border-bottom: 1px solid var(--gray-lt);
-      transition: background .12s;
+      transition: background .12s, color .12s;
     }
     .dropdown a:last-child { border-bottom: none; }
     .dropdown a:hover { background: var(--gray-lt); color: var(--gold); }
     .caret { font-size: 10px; margin-left: 3px; }
-
     .nav-cta {
       background: var(--navy);
       color: var(--white) !important;
@@ -159,7 +164,7 @@
       font-weight: 500;
       text-decoration: none;
       margin-left: 8px;
-      transition: background .2s;
+      transition: background .2s, color .2s;
     }
     .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
 
@@ -181,7 +186,6 @@
       background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w1200-h630-p-k-no-nu/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg') center/cover no-repeat;
       opacity: 0.18;
     }
-    /* Cross pattern overlay */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
@@ -244,11 +248,7 @@
       display: inline-block;
     }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
-
-    .hero-cross {
-      flex-shrink: 0;
-      opacity: 0.25;
-    }
+    .hero-cross { flex-shrink: 0; opacity: 0.25; }
     .hero-cross svg { width: 180px; height: 180px; fill: var(--gold); }
 
     /* ──────────── SECTION SHARED ──────────── */
@@ -268,11 +268,6 @@
       line-height: 1.3;
       margin-bottom: 14px;
     }
-    .section-subtitle {
-      color: var(--gray);
-      max-width: 520px;
-      font-size: 15px;
-    }
     .divider {
       width: 48px; height: 3px;
       background: var(--gold);
@@ -281,13 +276,10 @@
     }
 
     /* ──────────── ABOUT STRIP ──────────── */
-    .about-strip {
-      background: var(--navy);
-      padding: 52px 0;
-    }
+    .about-strip { background: var(--navy); padding: 52px 0; }
     .about-strip .container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
     }
@@ -300,7 +292,6 @@
       margin-bottom: 6px;
     }
     .strip-stat .lbl { font-size: 13px; color: #9aabc5; letter-spacing: .04em; }
-    .strip-divider { width: 1px; height: 60px; background: rgba(255,255,255,.15); margin: 0 auto; }
 
     /* ──────────── ABOUT SECTION ──────────── */
     .about-grid {
@@ -309,9 +300,7 @@
       gap: 64px;
       align-items: center;
     }
-    .about-img {
-      position: relative;
-    }
+    .about-img { position: relative; }
     .about-img img {
       width: 100%;
       border-radius: 6px;
@@ -356,16 +345,9 @@
       background: var(--white);
     }
     .post-card:hover { box-shadow: 0 8px 32px rgba(26,39,68,.12); transform: translateY(-3px); }
-    .post-card img {
-      width: 100%; height: 200px; object-fit: cover;
-      display: block;
-    }
+    .post-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
     .post-body { padding: 20px; }
-    .post-tag {
-      font-size: 11px; font-weight: 600; letter-spacing: .08em;
-      color: var(--gold); margin-bottom: 8px;
-      display: block;
-    }
+    .post-tag { font-size: 11px; font-weight: 600; letter-spacing: .08em; color: var(--gold); margin-bottom: 8px; display: block; }
     .post-title {
       font-family: 'Tiro Devanagari Hindi', serif;
       font-size: 17px;
@@ -427,9 +409,7 @@
       gap: 16px;
     }
     .gallery-grid .big { grid-column: span 2; grid-row: span 2; }
-    .gallery-item {
-      overflow: hidden; border-radius: 6px; background: var(--gray-lt);
-    }
+    .gallery-item { overflow: hidden; border-radius: 6px; background: var(--gray-lt); }
     .gallery-item img {
       width: 100%; height: 100%; object-fit: cover;
       display: block;
@@ -438,6 +418,67 @@
     }
     .gallery-item.big img { aspect-ratio: auto; height: 100%; }
     .gallery-item:hover img { transform: scale(1.04); }
+
+    /* ──────────── HOW TO FIND US ──────────── */
+    .findus-section {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0;
+    }
+    .findus-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .findus-info p { color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
+    .findus-detail { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 18px; }
+    .findus-detail svg {
+      width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px;
+      fill: none; stroke: var(--gold); stroke-width: 2;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .findus-detail strong { display: block; color: var(--navy); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .findus-detail span { color: var(--gray); font-size: 14px; line-height: 1.6; }
+    .findus-directions {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 24px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 11px 22px;
+      border-radius: 4px;
+      font-size: 14px; font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .findus-directions:hover { background: var(--gold); color: var(--navy); }
+    .findus-directions svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .findus-map iframe {
+      width: 100%; border-radius: 6px; display: block;
+      border: 2px solid var(--border);
+      box-shadow: 0 4px 20px rgba(0,0,0,.08);
+    }
+
+    /* ──────────── YOUTUBE ──────────── */
+    .yt-section { background: var(--gray-lt); padding: 72px 0; }
+    .yt-inner { display: flex; gap: 48px; align-items: center; }
+    .yt-text { flex: 1; }
+    .yt-text p { color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
+    .yt-embed { flex: 1; }
+    .yt-embed iframe { width: 100%; aspect-ratio: 16/9; border-radius: 6px; display: block; border: none; }
+    .yt-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #ff0000;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600; font-size: 14px;
+      transition: background .2s;
+    }
+    .yt-link:hover { background: #cc0000; }
+    .yt-link svg { width: 18px; height: 18px; fill: currentColor; }
 
     /* ──────────── CONNECT ──────────── */
     .connect-section { background: var(--navy); }
@@ -451,10 +492,7 @@
       align-items: start;
     }
     .connect-info p { color: #9aabc5; font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
-    .connect-detail {
-      display: flex; gap: 12px; align-items: flex-start;
-      margin-bottom: 16px;
-    }
+    .connect-detail { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
     .connect-detail svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; fill: var(--gold); }
     .connect-detail span { color: #c5ccdc; font-size: 14px; line-height: 1.6; }
     .social-row { display: flex; gap: 12px; margin-top: 28px; }
@@ -512,31 +550,8 @@
     }
     .btn-submit:hover { background: var(--gold-lt); }
 
-    /* ──────────── YOUTUBE ──────────── */
-    .yt-section { background: var(--gray-lt); padding: 72px 0; }
-    .yt-inner { display: flex; gap: 48px; align-items: center; }
-    .yt-text { flex: 1; }
-    .yt-text p { color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
-    .yt-embed { flex: 1; }
-    .yt-embed iframe { width: 100%; aspect-ratio: 16/9; border-radius: 6px; display: block; border: none; }
-    .yt-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #ff0000;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600; font-size: 14px;
-      transition: background .2s;
-    }
-    .yt-link:hover { background: #cc0000; }
-    .yt-link svg { width: 18px; height: 18px; fill: currentColor; }
-
     /* ──────────── FOOTER ──────────── */
-    footer {
-      background: #111827;
-      padding: 56px 0 0;
-    }
+    footer { background: #111827; padding: 56px 0 0; }
     .footer-grid {
       display: grid;
       grid-template-columns: 1.8fr 1fr 1fr;
@@ -562,7 +577,7 @@
       border-top: 1px solid #1f2937;
       padding: 20px 24px;
       text-align: center;
-      color: #4b5563;
+      color: #9ca3af;
       font-size: 13px;
     }
 
@@ -603,10 +618,10 @@
       .posts-grid { grid-template-columns: 1fr 1fr; }
       .verses-grid { grid-template-columns: 1fr 1fr; }
       .about-strip .container { grid-template-columns: 1fr; gap: 24px; }
-      .strip-divider { width: 60px; height: 1px; }
       .connect-grid { grid-template-columns: 1fr; }
       .yt-inner { flex-direction: column; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .findus-inner { grid-template-columns: 1fr; gap: 32px; }
     }
     @media (max-width: 600px) {
       .posts-grid { grid-template-columns: 1fr; }
@@ -619,586 +634,550 @@
       .social-row { flex-wrap: wrap; }
       .hero-inner { padding: 60px 24px; }
     }
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-    }
-    /* ──────────── HOW TO FIND US ──────────── */
-.findus-section {
-  background: var(--cream);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 72px 0;
-}
-.findus-inner {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 56px;
-  align-items: start;
-}
-.findus-info { }
-.findus-info p { color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
-.findus-detail {
-  display: flex; gap: 12px; align-items: flex-start;
-  margin-bottom: 18px;
-}
-.findus-detail svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.findus-detail div { }
-.findus-detail strong { display: block; color: var(--navy); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
-.findus-detail span { color: var(--gray); font-size: 14px; line-height: 1.6; }
-.findus-directions {
-  display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 24px;
-  background: var(--navy);
-  color: var(--white);
-  padding: 11px 22px;
-  border-radius: 4px;
-  font-size: 14px; font-weight: 600;
-  text-decoration: none;
-  transition: background .2s;
-}
-.findus-directions:hover { background: var(--gold); color: var(--navy); }
-.findus-directions svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.findus-map iframe {
-  width: 100%; border-radius: 6px; display: block;
-  border: 2px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,.08);
-}
-@media (max-width: 768px) {
-  .findus-inner { grid-template-columns: 1fr; gap: 32px; }
-}
   </style>
-  <meta name="google-site-verification" content="NfuH460OtL4_jrKk4-gGBMEQsgZ5UaA38Sl_skEcvLw" />
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <span class="topbar-info">📍 फत्तेपुर, नेपाल &nbsp;|&nbsp; शनिबार आराधना: बिहान ८:३० बजे</span>
-    <div class="topbar-social">
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" aria-label="Facebook">
-        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      </a>
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" aria-label="YouTube">
-        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a2744"/></svg>
-      </a>
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/fattepurchurch/" target="_blank" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="#1a2744"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#1a2744" stroke-width="2" stroke-linecap="round"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="header-inner">
-    <a href="#" class="logo">
-      <div class="logo-icon" style="background:transparent;">
-        <img src="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png" alt="Fattepur Church Logo" style="width:48px; height:48px; object-fit:contain;"/>
-      </div>
-      <div class="logo-text-wrap">
-        <div class="logo-ne">फत्तेपुर मण्डली, नेपाल</div>
-        <div class="logo-en">Fattepur Church Nepal</div>
-      </div>
-    </a>
-
-    <nav>
-      <a href="#hero" class="nav-link active">गृहपृष्ठ</a>
-      <div class="nav-item">
-        <a href="#about" class="nav-link">हाम्रोबारे <span class="caret">▾</span></a>
-        <div class="dropdown">
-          <a href="#about">मण्डलीको परिचय</a>
-          <a href="#gallery">फोटो ग्यालरी</a>
-        </div>
-      </div>
-      <div class="nav-item">
-        <a href="#posts" class="nav-link">सन्देश <span class="caret">▾</span></a>
-        <div class="dropdown">
-          <a href="#posts">ताजा सन्देशहरु</a>
-          <a href="#verses">बाइबल वचनहरु</a>
-        </div>
-      </div>
-      <a href="#youtube" class="nav-link">भिडियो</a>
-      <a href="#findus" class="nav-link">हाम्रो स्थान</a>
-      <a href="#connect" class="nav-link">सम्पर्क</a>
-      <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" class="nav-cta">Facebook</a>
-
-      <!-- Search Box -->
-      <div style="position:relative; margin-left:10px;">
-        <input id="siteSearch" type="text" placeholder="खोज्नुहोस्..." onkeyup="siteSearchFn()" style="padding:7px 36px 7px 12px; border:1.5px solid var(--border); border-radius:4px; font-size:13px; outline:none; width:160px; font-family:inherit; color:var(--navy);"/>
-        <svg style="position:absolute; right:10px; top:50%; transform:translateY(-50%); width:15px; height:15px; stroke:var(--gray); fill:none; stroke-width:2; pointer-events:none;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <div id="searchResults" style="display:none; position:absolute; top:110%; right:0; background:white; border:1px solid var(--border); border-top:2px solid var(--gold); border-radius:0 0 6px 6px; width:280px; max-height:320px; overflow-y:auto; box-shadow:0 8px 24px rgba(0,0,0,.1); z-index:300;"></div>
-      </div>
-    </nav>
-
-    <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="मेनु खोल्नुहोस्">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </div>
-</header>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <div class="mobile-nav-top">
-    <div class="logo-ne" style="color:white;font-family:'Tiro Devanagari Hindi',serif;font-size:20px;">फत्तेपुर मण्डली</div>
-    <button class="mobile-close" onclick="document.getElementById('mobileNav').classList.remove('open')">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-  </div>
-  <a href="#hero" onclick="document.getElementById('mobileNav').classList.remove('open')">गृहपृष्ठ</a>
-  <a href="#about" onclick="document.getElementById('mobileNav').classList.remove('open')">हाम्रोबारे</a>
-  <a href="#posts" onclick="document.getElementById('mobileNav').classList.remove('open')">सन्देशहरु</a>
-  <a href="#verses" onclick="document.getElementById('mobileNav').classList.remove('open')">बाइबल वचन</a>
-  <a href="#youtube" onclick="document.getElementById('mobileNav').classList.remove('open')">भिडियो</a>
-  <a href="#gallery" onclick="document.getElementById('mobileNav').classList.remove('open')">फोटो ग्यालरी</a>
-  <a href="#findus" onclick="document.getElementById('mobileNav').classList.remove('open')">हाम्रो स्थान</a>
-  <a href="#connect" onclick="document.getElementById('mobileNav').classList.remove('open')">सम्पर्क</a>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <span class="hero-badge">फत्तेपुर मण्डली, नेपाल • स्थापना बि.सं. २०३७</span>
-      <h1>परमेश्वरको <span>प्रेम</span> र<br/>सेवामा समर्पित</h1>
-      <p class="hero-sub">
-        फत्तेपुर मण्डली — जहाँ प्रत्येक मानिस स्वागत योग्य छ।
-        आराधना, वचन र समुदायमा एकसाथ बढ्ने स्थान।
-      </p>
-      <div class="hero-btns">
-        <a href="#about" class="btn-primary">हाम्रोबारे जान्नुहोस्</a>
-        <a href="#connect" class="btn-outline">हामीसँग जोडिनुहोस्</a>
-      </div>
-    </div>
-    <div class="hero-cross">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <rect x="40" y="5" width="20" height="90" rx="4"/>
-        <rect x="5" y="30" width="90" height="20" rx="4"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT STRIP -->
-<div class="about-strip">
-  <div class="container">
-    <div class="strip-stat">
-      <div class="num">२०३७</div>
-      <div class="lbl">स्थापना वर्ष (बि.सं.)</div>
-    </div>
-    <div class="strip-divider"></div>
-    <div class="strip-stat">
-      <div class="num">४६+</div>
-      <div class="lbl">वर्षको सेवा</div>
-    </div>
-   </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img">
-        <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w640/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg"
-          alt="फत्तेपुर मण्डलीका सदस्यहरु"
-        />
-      </div>
-      <div class="about-text">
-        <p class="section-label">हाम्रोबारेमा:</p>
-        <h2 class="section-title">फत्तेपुर मण्डलीको परिचय</h2>
-        <div class="divider"></div>
-        <p>
-          फत्तेपुर मण्डली, नेपालको एक सक्रिय ईसाई मण्डली हो जसले बि.सं. २०३७ देखि
-          परमेश्वरको वचन र सेवामा समर्पित भएर काम गर्दै आएको छ।
-          हामी सबै मिलेर परमेश्वरको राज्य
-          विस्तारमा लागिपरेका छौं।
-        </p>
-        <p>
-          प्रत्येक शनिबार हामी एकसाथ जम्मा भएर आराधना गर्छौं, वचन सुन्छौं
-          र एकअर्कालाई प्रोत्साहन गर्छौं। हाम्रो मण्डलीमा सबैलाई स्वागत छ —
-          नयाँ र पुरानो, युवा , वृद्ध , आमा , दिदि , बहिनि बालबालिका ।
-        </p>
-        <blockquote class="about-verse">
-          "तैंले परमप्रभु आफ्‍ना परमेश्‍वरलाई आफ्‍नो सारा हृदयले, र आफ्‍नो सारा प्राणले, र आफ्‍नो सारा समझले प्रेम गर्नू।"
-          — मत्ती २२:३७
-        </blockquote>
-        <a href="#connect" class="btn-primary" style="font-size:14px;">हामीसँग भेट्नुहोस्</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POSTS -->
-<section id="posts" style="background: var(--cream);">
-  <div class="container">
-    <p class="section-label">ताजा सन्देशहरु</p>
-    <h2 class="section-title">मण्डलीका अपडेटहरु</h2>
-    <div class="divider"></div>
-
-    <div class="posts-grid">
-      <!-- Post 1 -->
-      <article class="post-card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQr-KU9ss_KrUppbVtC-V6z3n5R0ONlkVCDDwlEjjM-UGIdMg9e9570Xr8s0BkzyZ96zF7iIY8rj2_FpZBHpA92HwvyEvE1f3VgJ_6RjEEOhLO1ukhXqGo8e-DsDxFPk1mVY3t0vt45GpE8EIrft6bRVbZMZAXnPMXCsGc_2JXYsIqIqe2g87GwTFuOg/w640/322192779_548497680490541_5398303754353494027_n.jpg" alt="बप्तिस्मा कार्यक्रम"/>
-        <div class="post-body">
-          <span class="post-tag">मण्डली समाचार</span>
-          <h3 class="post-title">बप्तिस्मा कार्यक्रम २०७९ का अपडेटहरु</h3>
-          <p class="post-excerpt">मिति २०७९ पुस १० गतेका दिन सम्पूर्ण फत्तेपुर मण्डलीको उपस्थितिमा पिता पुत्र र पवित्र आत्माको नाममा बप्तिस्मा कार्यक्रम सम्पन्न भयो।</p>
-          <p class="post-meta" style="margin-bottom:14px;">जनवरी २०२३</p>
-          <a href="https://fattepurchurch.blogspot.com/2023/01/blog-post.html" target="_blank" class="post-link">पूरा पढ्नुहोस् →</a>
-        </div>
-      </article>
-
-      <!-- Post 2 -->
-      <article class="post-card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixt57IaRnd-k0_Ax9OPuTqreZTprZpMj9zLFVCTDBSWNvXiDJN5DeVBdNv-9taPwJbaPBUxQ_fR_iLweLzjljNkbrHkx_tgQPVBe-0Ph_S-1a9mW4gx0gN-sX6HLZaECwRM60eityjG-B3/w640/5.jpg" alt="हितोपदेश"/>
-        <div class="post-body">
-          <span class="post-tag">बाइबल वचन</span>
-          <h3 class="post-title">हितोपदेश १५:१ — नम्र उत्तर</h3>
-          <p class="post-excerpt">"A soft answer turneth away wrath: but grievous words stir up anger." नम्र उत्तरले क्रोधलाई शान्त गर्छ।</p>
-          <p class="post-meta" style="margin-bottom:14px;">अगस्त २०२१</p>
-          <a href="https://fattepurchurch.blogspot.com/2021/08/proverbs-151-soft-answer-turneth-away.html" target="_blank" class="post-link">पूरा पढ्नुहोस् →</a>
-        </div>
-      </article>
-
-      <!-- Post 3 -->
-      <article class="post-card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0FPrsmcsMViEtsP5jGL229cHHwq-0pcRKb3kDb6aq3S0_JMe34J9AEs-XrlarcAXXyhlWRdcBv1sfmim3R1X6QA76P68FpqpWoha__rzLMYqKNoGKrF0AWq_MiDmEv4L3iiJtn8FzlOjS/w640/8.jpg" alt="मर्कूस"/>
-        <div class="post-body">
-          <span class="post-tag">सुसमाचार</span>
-          <h3 class="post-title">मर्कूस १६:१५ — सारा संसारमा जानुहोस्</h3>
-          <p class="post-excerpt">"Go ye into all the world, and preach the gospel to every creature." — प्रभु येशूको आदेश।</p>
-          <p class="post-meta" style="margin-bottom:14px;">अगस्त २०२१</p>
-          <a href="https://fattepurchurch.blogspot.com/2021/08/and-he-said-unto-them-go-ye-into-all.html" target="_blank" class="post-link">पूरा पढ्नुहोस् →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- BIBLE VERSES -->
-<section class="verses-banner" id="verses">
-  <div class="container">
-    <p class="section-label" style="text-align:center;">पवित्र शास्त्र</p>
-    <h2 class="section-title">बाइबलका वचनहरु</h2>
-    <div class="divider"></div>
-    <div class="verses-grid">
-      <div class="verse-card">
-        <span class="verse-ref">१ शमूएल १६:७</span>
-        <p class="verse-text">तर परमप्रभुले शमूएललाई भन्‍नुभयो, “त्‍यो सुन्‍दर र अल्‍गो भए तापनि त्‍यसको ख्‍याल नगर्‌। मैले त्‍यसलाई इन्‍कार गरेको छु। परमप्रभुले मानिसले झैँ हेर्नुहुन्‍न। मानिसले रूप हेरेर विचार गर्छ, तर परमप्रभुले हृदयभित्र हेरेर विचार गर्नुहुन्‍छ।”</p>
-      </div>
-      <div class="verse-card">
-        <span class="verse-ref">हिब्रू १०:२५</span>
-        <p class="verse-text">"कति जनाको सङ्गतिमा नजाने बानी हुन्‍छ, तर हामीचाहिँ एकसाथ भेला हुन नछोडौं। तर प्रभुको दिन नजिक आइरहेको तिमीहरूले देखेका हुनाले एउटाले अर्कालाई झन्‌ प्रोत्‍साहन देओ।"</p>
-      </div>
-      <div class="verse-card">
-        <span class="verse-ref">१ पत्रुस ३:९</span>
-        <p class="verse-text">"खराबीको बदला खराबी नगर्ने अथवा अपमानको बदला अपमान नगर्ने, बरु त्‍यसको सट्टामा आशिष्‌ दिने होओ, किनकि यसैको लागि तिमीहरू बोलाइएका छौ, कि तिमीहरूले आशिष्‌ प्राप्‍त गर्न सक।  "</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="container">
-    <p class="section-label">फोटो ग्यालरी</p>
-    <h2 class="section-title">मण्डलीका क्षणहरु</h2>
-    <div class="divider"></div>
-    <div class="gallery-grid">
-      <div class="gallery-item big">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w640/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg" alt="फत्तेपुर, भाग्लपुर र गाईघाट मण्डली"/>
-      </div>
-      <div class="gallery-item">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQr-KU9ss_KrUppbVtC-V6z3n5R0ONlkVCDDwlEjjM-UGIdMg9e9570Xr8s0BkzyZ96zF7iIY8rj2_FpZBHpA92HwvyEvE1f3VgJ_6RjEEOhLO1ukhXqGo8e-DsDxFPk1mVY3t0vt45GpE8EIrft6bRVbZMZAXnPMXCsGc_2JXYsIqIqe2g87GwTFuOg/w640/322192779_548497680490541_5398303754353494027_n.jpg" alt="बप्तिस्मा"/>
-      </div>
-      <div class="gallery-item">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0FPrsmcsMViEtsP5jGL229cHHwq-0pcRKb3kDb6aq3S0_JMe34J9AEs-XrlarcAXXyhlWRdcBv1sfmim3R1X6QA76P68FpqpWoha__rzLMYqKNoGKrF0AWq_MiDmEv4L3iiJtn8FzlOjS/w640/8.jpg" alt="सन्देश"/>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- HOW TO FIND US -->
-<section class="findus-section" id="findus">
-  <div class="container">
-    <p class="section-label" style="text-align:center;">हाम्रो स्थान</p>
-    <h2 class="section-title" style="text-align:center;">हामीलाई कसरी भेट्ने</h2>
-    <div class="divider" style="margin:18px auto 48px;"></div>
-    <div class="findus-inner">
-      <div class="findus-info">
-        <p>फत्तेपुर मण्डलीमा स्वागत छ। तलको नक्सा र ठेगाना प्रयोग गरेर सजिलै हाम्रो चर्च सम्म आउन सक्नुहुन्छ।</p>
-
-        <div class="findus-detail">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div>
-            <strong>चर्चको ठेगाना</strong>
-            <span>फत्तेपुर मण्डली, फत्तेपुर,<br/>सप्तरी जिल्ला, नेपाल</span>
-          </div>
-        </div>
-
-        <div class="findus-detail">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <div>
-            <strong>आराधना समय</strong>
-            <span>शनिबार बिहान ८:३० बजे</span>
-          </div>
-        </div>
-
-        <div class="findus-detail">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          <div>
-            <strong>स्थान</strong>
-            <span>फत्तेपुर, नेपाल</span>
-          </div>
-        </div>
-
-        <a href="https://maps.app.goo.gl/kUn29cDjgsPA4jAZ6" target="_blank" class="findus-directions">
-          <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-          Google Maps मा दिशा पाउनुहोस्
-        </a>
-      </div>
-
-      <div class="findus-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.5553329973873!2d86.93385887488856!3d26.72664916806279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef1f006d02aef1%3A0x7031c65d25484add!2sFattepur%20Church!5e0!3m2!1sen!2sjp!4v1789187570608!5m2!1sen!2sjp" width="600" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-  
-<!-- YOUTUBE -->
-<section class="yt-section" id="youtube">
-  <div class="container">
-    <!-- Church Info Block -->
-    <div style="text-align:center; max-width:680px; margin:0 auto 56px;">
-      <p class="section-label" style="text-align:center;">हाम्रो मण्डली</p>
-      <h2 class="section-title" style="text-align:center;">फत्तेपुर मण्डलीबारे थोरै जानकारी</h2>
-      <div class="divider" style="margin:18px auto 28px;"></div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; text-align:left; margin-bottom:8px;">
-        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
-          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">स्थापना</div>
-          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">बि.सं. २०३७ (सन् १९८०)</div>
-        </div>
-        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
-          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">आराधना समय</div>
-          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">शनिबार बिहान ८:३० बजे बाट</div>
-        </div>
-        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
-          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">स्थान</div>
-          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">फत्तेपुर, सप्तर, नेपाल।</div>
-        </div>
-        <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
-          <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">हामि उपलब्ध छौ</div>
-          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:15px;">Facebook / Youtube / Instagram मा </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="yt-inner">
-      <div class="yt-text">
-        <p class="section-label">हाम्रो च्यानल</p>
-        <h2 class="section-title">YouTube मा हेर्नुहोस्</h2>
-        <div class="divider"></div>
-        <p>
-          फत्तेपुर मण्डलीका आराधना, सन्देश र विशेष कार्यक्रमहरु
-          हाम्रो YouTube च्यानलमा हेर्न सकिन्छ। Subscribe गर्नुहोस्
-          र नयाँ भिडियोहरुको सूचना पाउनुहोस्।
-        </p>
-        <p style="font-size:14px; color:var(--gray); margin-bottom:24px; font-style:italic;">
-          "संगतिको तृष्णा" — Ps. Gambhirman Rai द्वारा सन्देश
-        </p>
-        <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" class="yt-link">
-          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-          YouTube च्यानल हेर्नुहोस्
-        </a>
-      </div>
-      <div class="yt-embed">
-                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:6px;">
-          <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/bDbBCDHMcZo" title="संगतिको तृष्णा (Desire for Fellowship) | Ps. Gambhirman Rai | Fattepur Church Nepal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONNECT -->
-<section class="connect-section" id="connect">
-  <div class="container">
-    <div class="connect-grid">
-      <div class="connect-info">
-        <p class="section-label">सम्पर्क</p>
-        <h2 class="section-title">हामीसँग जोडिनुहोस्</h2>
-        <div class="divider"></div>
-        <p>
-          यदि तपाईँ हाम्रो मण्डलीमा आउन चाहनुहुन्छ वा थप जानकारी लिन
-          चाहनुहुन्छ भने हामीलाई सम्पर्क गर्नुहोस्। हामी सधैँ स्वागत
-          गर्न तयार छौं।
-        </p>
-        <div class="connect-detail">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>फत्तेपुर, नेपाल</span>
-        </div>
-        <div class="connect-detail">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="3"/></svg>
-          <span>शनिबार बिहान ८:३० बजे<br/>आराधना सेवा</span>
-        </div>
-        <div class="connect-detail">
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-info">📍 फत्तेपुर, सप्तरी, नेपाल &nbsp;|&nbsp; शनिबार आराधना: बिहान ८:३० बजे</span>
+      <div class="topbar-social">
+        <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          <span>facebook.com/FattepurChurchNepal</span>
-        </div>
-
-        <div class="social-row">
-          <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" class="social-btn fb">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            Facebook
-          </a>
-          <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" class="social-btn yt">
-            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            YouTube
-          </a>
-          <a href="https://www.instagram.com/fattepurchurch/" target="_blank" class="social-btn ig">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Instagram
-          </a>
-        </div>
-      </div>
-
-      <div class="connect-form-wrap">
-        <h3>प्रार्थनाको बिषय यहाँबाट हामीलाई पठाउनुहोस्</h3>
-        <form id="contact-form">
-          <div class="form-group">
-            <label>तपाईँको नाम</label>
-            <input type="text" name="user_name" placeholder="पूरा नाम लेख्नुहोस्" required/>
-          </div>
-          <div class="form-group">
-            <label>इमेल वा फोन</label>
-            <input type="text" name="user_contact" placeholder="सम्पर्क नम्बर वा इमेल" required/>
-          </div>
-          <div class="form-group">
-            <label>सन्देश</label>
-            <textarea name="message" placeholder="यहाँ आफ्नो प्राथानाको बिषय लेख्नुहोस्..." required></textarea>
-          </div>
-          <button type="submit" class="btn-submit" id="submit-btn">सन्देश पठाउनुहोस्</button>
-          <div id="form-status" style="margin-top:12px; font-size:14px; border-radius:4px;"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a href="#" class="logo" style="margin-bottom:16px;display:flex;">
-          <div class="logo-icon" style="background:transparent;">
-            <img src="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png" alt="Fattepur Church Logo" style="width:48px; height:48px; object-fit:contain;"/>
-          </div>
-          <div class="logo-text-wrap">
-            <div class="logo-ne" style="color:white;">फत्तेपुर मण्डली</div>
-            <div class="logo-en">Fattepur Church Nepal</div>
-          </div>
         </a>
-        <p>परमेश्वरको वचन र सेवामा समर्पित। सबैलाई स्वागत छ — आउनुहोस् र परिवारको अंश बन्नुहोस्।</p>
-      </div>
-      <div class="footer-col">
-        <h4>पृष्ठहरु</h4>
-        <a href="#hero">गृहपृष्ठ</a>
-        <a href="#about">हाम्रोबारे</a>
-        <a href="#posts">सन्देशहरु</a>
-        <a href="#verses">बाइबल वचन</a>
-        <a href="#gallery">ग्यालरी</a>
-        <a href="#connect">सम्पर्क</a>
-      </div>
-      <div class="footer-col">
-        <h4>सोशल मिडिया</h4>
-        <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank">Facebook</a>
-        <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/fattepurchurch/" target="_blank">Instagram</a>
-        <a href="https://fattepurchurch.blogspot.com" target="_blank">Blogspot</a>
+        <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+        </a>
+        <a href="https://www.instagram.com/fattepurchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        </a>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    © २०८१ फत्तेपुर मण्डली, नेपाल। सर्वाधिकार सुरक्षित। &nbsp;|&nbsp; स्थापना बि.सं. २०३७
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <img src="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png" alt="Fattepur Church Logo" width="48" height="48" style="object-fit:contain;"/>
+        </div>
+        <div class="logo-text-wrap">
+          <div class="logo-ne">फत्तेपुर मण्डली, नेपाल</div>
+          <div class="logo-en">Fattepur Church Nepal</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#hero" class="nav-link active">गृहपृष्ठ</a>
+        <div class="nav-item">
+          <a href="#about" class="nav-link">हाम्रोबारे <span class="caret">▾</span></a>
+          <div class="dropdown">
+            <a href="#about">मण्डलीको परिचय</a>
+            <a href="#gallery">फोटो ग्यालरी</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#posts" class="nav-link">सन्देश <span class="caret">▾</span></a>
+          <div class="dropdown">
+            <a href="#posts">ताजा सन्देशहरु</a>
+            <a href="#verses">बाइबल वचनहरु</a>
+          </div>
+        </div>
+        <a href="#youtube" class="nav-link">भिडियो</a>
+        <a href="#findus" class="nav-link">हाम्रो स्थान</a>
+        <a href="#connect" class="nav-link">सम्पर्क</a>
+        <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" rel="noopener noreferrer" class="nav-cta">Facebook</a>
+        
+        <!-- Search Box -->
+        <div style="position:relative; margin-left:10px;">
+          <input id="siteSearch" type="text" placeholder="खोज्नुहोस्..." onkeyup="siteSearchFn()" aria-label="साइटमा खोज्नुहोस्" style="padding:7px 36px 7px 12px; border:1.5px solid var(--border); border-radius:4px; font-size:13px; outline:none; width:160px; font-family:inherit; color:var(--navy);"/>
+          <svg style="position:absolute; right:10px; top:50%; transform:translateY(-50%); width:15px; height:15px; stroke:var(--gray); fill:none; stroke-width:2; pointer-events:none;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div id="searchResults" style="display:none; position:absolute; top:110%; right:0; background:white; border:1px solid var(--border); border-top:2px solid var(--gold); border-radius:0 0 6px 6px; width:280px; max-height:320px; overflow-y:auto; box-shadow:0 8px 24px rgba(0,0,0,.1); z-index:300;"></div>
+        </div>
+      </nav>
+      <button class="hamburger" onclick="toggleMobileNav(true)" aria-label="मेनु खोल्नुहोस्">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-top">
+      <div class="logo-ne" style="color:white;font-family:'Tiro Devanagari Hindi',serif;font-size:20px;">फत्तेपुर मण्डली</div>
+      <button class="mobile-close" onclick="toggleMobileNav(false)" aria-label="मेनु बन्द गर्नुहोस्">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <a href="#hero" onclick="toggleMobileNav(false)">गृहपृष्ठ</a>
+    <a href="#about" onclick="toggleMobileNav(false)">हाम्रोबारे</a>
+    <a href="#posts" onclick="toggleMobileNav(false)">सन्देशहरु</a>
+    <a href="#verses" onclick="toggleMobileNav(false)">बाइबल वचन</a>
+    <a href="#youtube" onclick="toggleMobileNav(false)">भिडियो</a>
+    <a href="#gallery" onclick="toggleMobileNav(false)">फोटो ग्यालरी</a>
+    <a href="#findus" onclick="toggleMobileNav(false)">हाम्रो स्थान</a>
+    <a href="#connect" onclick="toggleMobileNav(false)">सम्पर्क</a>
   </div>
-</footer>
-<script>
-  const searchData = [
-    { title: "हाम्रो स्थान", section: "#findus", text: "फत्तेपुर मण्डली ठेगाना नक्सा location map how to find us" },
-    { title: "गृहपृष्ठ", section: "#hero", text: "फत्तेपुर मण्डली, नेपाल परमेश्वरको प्रेम र सेवामा समर्पित" },
-    { title: "हाम्रोबारे", section: "#about", text: "फत्तेपुर मण्डली परिचय बि.सं. २०३७ स्थापना भाग्लपुर गाईघाट" },
-    { title: "आराधना समय", section: "#about", text: "शनिबार बिहान ८:३० बजे आराधना सेवा" },
-    { title: "बप्तिस्मा कार्यक्रम २०७९", section: "#posts", text: "निरोज मगर बिनिता राई बप्तिस्मा पुस २०७९" },
-    { title: "हितोपदेश १५:१", section: "#posts", text: "नम्र उत्तरले क्रोधलाई शान्त गर्छ soft answer wrath" },
-    { title: "मर्कूस १६:१५", section: "#posts", text: "सारा संसारमा जानुहोस् सुसमाचार gospel preach" },
-    { title: "बाइबल वचनहरु", section: "#verses", text: "१ शमूएल हिब्रू १ पत्रुस bible verse" },
-    { title: "१ शमूएल १६:७", section: "#verses", text: "परमप्रभुले मनको भित्री भाग हेर्नुहुन्छ" },
-    { title: "हिब्रू १०:२५", section: "#verses", text: "एकसाथ भेला हुन नछोडौं प्रोत्साहन" },
-    { title: "१ पत्रुस ३:९", section: "#verses", text: "खराबीको बदला खराबी नगर्ने आशिष्" },
-    { title: "फोटो ग्यालरी", section: "#gallery", text: "मण्डलीका क्षणहरु photos gallery" },
-    { title: "YouTube भिडियो", section: "#youtube", text: "संगतिको तृष्णा Ps Gambhirman Rai भिडियो" },
-    { title: "सम्पर्क", section: "#connect", text: "सम्पर्क गर्नुहोस् Facebook Instagram फत्तेपुर नेपाल" },
-  ];
 
-  function siteSearchFn() {
-    const q = document.getElementById('siteSearch').value.toLowerCase().trim();
-    const box = document.getElementById('searchResults');
-    if (!q) { box.style.display = 'none'; return; }
-    const hits = searchData.filter(d => d.title.toLowerCase().includes(q) || d.text.toLowerCase().includes(q));
-    if (!hits.length) {
-      box.innerHTML = '<div style="padding:14px 16px; color:#9ca3af; font-size:13px;">कुनै नतिजा भेटिएन।</div>';
-    } else {
-      box.innerHTML = hits.map(h => `
-        <a href="${h.section}" onclick="document.getElementById('searchResults').style.display='none'; document.getElementById('siteSearch').value='';"
-          style="display:block; padding:11px 16px; font-size:13px; color:var(--navy); text-decoration:none; border-bottom:1px solid #f0ede8;">
-          <strong style="display:block; margin-bottom:2px;">${h.title}</strong>
-          <span style="color:#9ca3af; font-size:12px;">${h.text.substring(0,60)}...</span>
-        </a>`).join('');
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">फत्तेपुर मण्डली, नेपाल • स्थापना बि.सं. २०३७</span>
+        <h1>परमेश्वरको <span>प्रेम</span> र<br/>सेवामा समर्पित</h1>
+        <p class="hero-sub">
+          फत्तेपुर मण्डली — जहाँ प्रत्येक मानिस स्वागत योग्य छ।
+          आराधना, वचन र समुदायमा एकसाथ बढ्ने स्थान।
+        </p>
+        <div class="hero-btns">
+          <a href="#about" class="btn-primary">हाम्रोबारे जान्नुहोस्</a>
+          <a href="#connect" class="btn-outline">हामीसँग जोडिनुहोस्</a>
+        </div>
+      </div>
+      <div class="hero-cross">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="5" width="20" height="90" rx="4"/>
+          <rect x="5" y="30" width="90" height="20" rx="4"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <div class="about-strip">
+    <div class="container">
+      <div class="strip-stat">
+        <div class="num">२०३७</div>
+        <div class="lbl">स्थापना वर्ष (बि.सं.)</div>
+      </div>
+      <div class="strip-stat">
+        <div class="num">४६+</div>
+        <div class="lbl">वर्षको निरन्तर सेवा</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w640/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg"
+            alt="फत्तेपुर मण्डलीका सदस्यहरु"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-text">
+          <p class="section-label">हाम्रोबारेमा:</p>
+          <h2 class="section-title">फत्तेपुर मण्डलीको परिचय</h2>
+          <div class="divider"></div>
+          <p>
+            फत्तेपुर मण्डली, नेपालको एक सक्रिय ईसाई मण्डली हो जसले बि.सं. २०३७ देखि
+            परमेश्वरको वचन र सेवामा समर्पित भएर काम गर्दै आएको छ।
+            हामी सबै मिलेर परमेश्वरको राज्य विस्तारमा लागिपरेका छौं।
+          </p>
+          <p>
+            प्रत्येक शनिबार हामी एकसाथ जम्मा भएर आराधना गर्छौं, वचन सुन्छौं
+            र एकअर्कालाई प्रोत्साहन गर्छौं। हाम्रो मण्डलीमा सबैलाई स्वागत छ —
+            नयाँ र पुरानो, युवा, वृद्ध, आमा, दिदी, बहिनी तथा बालबालिका।
+          </p>
+          <blockquote class="about-verse">
+            "तैंले परमप्रभु आफ्ना परमेश्वरलाई आफ्नो सारा हृदयले, र आफ्नो सारा प्राणले, र आफ्नो सारा समझले प्रेम गर्नू।"
+            — मत्ती २२:३७
+          </blockquote>
+          <a href="#connect" class="btn-primary" style="font-size:14px;">हामीसँग भेट्नुहोस्</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <section id="posts" style="background: var(--cream);">
+    <div class="container">
+      <p class="section-label">ताजा सन्देशहरु</p>
+      <h2 class="section-title">मण्डलीका अपडेटहरु</h2>
+      <div class="divider"></div>
+      <div class="posts-grid">
+        <!-- Post 1 -->
+        <article class="post-card">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQr-KU9ss_KrUppbVtC-V6z3n5R0ONlkVCDDwlEjjM-UGIdMg9e9570Xr8s0BkzyZ96zF7iIY8rj2_FpZBHpA92HwvyEvE1f3VgJ_6RjEEOhLO1ukhXqGo8e-DsDxFPk1mVY3t0vt45GpE8EIrft6bRVbZMZAXnPMXCsGc_2JXYsIqIqe2g87GwTFuOg/w640/322192779_548497680490541_5398303754353494027_n.jpg" alt="बप्तिस्मा कार्यक्रम" loading="lazy"/>
+          <div class="post-body">
+            <span class="post-tag">मण्डली समाचार</span>
+            <h3 class="post-title">बप्तिस्मा कार्यक्रम २०७९ का अपडेटहरु</h3>
+            <p class="post-excerpt">मिति २०७९ पुस १० गतेका दिन सम्पूर्ण फत्तेपुर मण्डलीको उपस्थितिमा पिता पुत्र र पवित्र आत्माको नाममा बप्तिस्मा कार्यक्रम सम्पन्न भयो।</p>
+            <p class="post-meta" style="margin-bottom:14px;">पुस २०७९</p>
+            <a href="https://fattepurchurch.blogspot.com/2023/01/blog-post.html" target="_blank" rel="noopener noreferrer" class="post-link">पूरा पढ्नुहोस् →</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post-card">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixt57IaRnd-k0_Ax9OPuTqreZTprZpMj9zLFVCTDBSWNvXiDJN5DeVBdNv-9taPwJbaPBUxQ_fR_iLweLzjljNkbrHkx_tgQPVBe-0Ph_S-1a9mW4gx0gN-sX6HLZaECwRM60eityjG-B3/w640/5.jpg" alt="हितोपदेश १५:१" loading="lazy"/>
+          <div class="post-body">
+            <span class="post-tag">बाइबल वचन</span>
+            <h3 class="post-title">हितोपदेश १५:१ — नम्र उत्तर</h3>
+            <p class="post-excerpt">"A soft answer turneth away wrath: but grievous words stir up anger." नम्र उत्तरले क्रोधलाई शान्त गर्छ।</p>
+            <p class="post-meta" style="margin-bottom:14px;">अगस्त २०२१</p>
+            <a href="https://fattepurchurch.blogspot.com/2021/08/proverbs-151-soft-answer-turneth-away.html" target="_blank" rel="noopener noreferrer" class="post-link">पूरा पढ्नुहोस् →</a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="post-card">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0FPrsmcsMViEtsP5jGL229cHHwq-0pcRKb3kDb6aq3S0_JMe34J9AEs-XrlarcAXXyhlWRdcBv1sfmim3R1X6QA76P68FpqpWoha__rzLMYqKNoGKrF0AWq_MiDmEv4L3iiJtn8FzlOjS/w640/8.jpg" alt="मर्कूस १६:१५" loading="lazy"/>
+          <div class="post-body">
+            <span class="post-tag">सुसमाचार</span>
+            <h3 class="post-title">मर्कूस १६:१५ — सारा संसारमा जानुहोस्</h3>
+            <p class="post-excerpt">"Go ye into all the world, and preach the gospel to every creature." — प्रभु येशूको आदेश।</p>
+            <p class="post-meta" style="margin-bottom:14px;">अगस्त २०२१</p>
+            <a href="https://fattepurchurch.blogspot.com/2021/08/and-he-said-unto-them-go-ye-into-all.html" target="_blank" rel="noopener noreferrer" class="post-link">पूरा पढ्नुहोस् →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIBLE VERSES -->
+  <section class="verses-banner" id="verses">
+    <div class="container">
+      <p class="section-label" style="text-align:center;">पवित्र शास्त्र</p>
+      <h2 class="section-title">बाइबलका वचनहरु</h2>
+      <div class="divider"></div>
+      <div class="verses-grid">
+        <div class="verse-card">
+          <span class="verse-ref">१ शमूएल १६:७</span>
+          <p class="verse-text">तर परमप्रभुले शमूएललाई भन्नुभयो, “त्यो सुन्दर र अल्गो भए तापनि त्यसको ख्याल नगर्। मैले त्यसलाई इन्कार गरेको छु। परमप्रभुले मानिसले झैँ हेर्नुहुन्न। मानिसले रूप हेरेर विचार गर्छ, तर परमप्रभुले हृदयभित्र हेरेर विचार गर्नुहुन्छ।”</p>
+        </div>
+        <div class="verse-card">
+          <span class="verse-ref">हिब्रू १०:२५</span>
+          <p class="verse-text">"कति जनाको सङ्गतिमा नजाने बानी हुन्छ, तर हामीचाहिँ एकसाथ भेला हुन नछोडौं। तर प्रभुको दिन नजिक आइरहेको तिमीहरूले देखेका हुनाले एउटाले अर्कालाई झन् प्रोत्साहन देओ।"</p>
+        </div>
+        <div class="verse-card">
+          <span class="verse-ref">१ पत्रुस ३:९</span>
+          <p class="verse-text">"खराबीको बदला खराबी नगर्ने अथवा अपमानको बदला अपमान नगर्ने, बरु त्यसको सट्टामा आशिष् दिने होओ, किनकि यसैको लागि तिमीहरू बोलाइएका छौ, कि तिमीहरूले आशिष् प्राप्त गर्न सक। "</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <p class="section-label">फोटो ग्यालरी</p>
+      <h2 class="section-title">मण्डलीका क्षणहरु</h2>
+      <div class="divider"></div>
+      <div class="gallery-grid">
+        <div class="gallery-item big">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5oyRwRHyi9iNFffHkDmqp_bJtg4v4lhvE7OIHdkjYF37Xypjefipk9bmFMZ8YDXGoN8dqLrGIqvqupEHuM-_izQkYjNPbfKUl01auHU8iAMrh7SqS8OBMljbeJhGiNXBQZKOAYAMsyKAH/w640/Fattepur+Church+with+Bhaglpur+Church+and+Gaaighat+Church.jpg" alt="फत्तेपुर, भाग्लपुर र गाईघाट मण्डली" loading="lazy"/>
+        </div>
+        <div class="gallery-item">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQr-KU9ss_KrUppbVtC-V6z3n5R0ONlkVCDDwlEjjM-UGIdMg9e9570Xr8s0BkzyZ96zF7iIY8rj2_FpZBHpA92HwvyEvE1f3VgJ_6RjEEOhLO1ukhXqGo8e-DsDxFPk1mVY3t0vt45GpE8EIrft6bRVbZMZAXnPMXCsGc_2JXYsIqIqe2g87GwTFuOg/w640/322192779_548497680490541_5398303754353494027_n.jpg" alt="बप्तिस्मा" loading="lazy"/>
+        </div>
+        <div class="gallery-item">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0FPrsmcsMViEtsP5jGL229cHHwq-0pcRKb3kDb6aq3S0_JMe34J9AEs-XrlarcAXXyhlWRdcBv1sfmim3R1X6QA76P68FpqpWoha__rzLMYqKNoGKrF0AWq_MiDmEv4L3iiJtn8FzlOjS/w640/8.jpg" alt="सन्देश" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO FIND US -->
+  <section class="findus-section" id="findus">
+    <div class="container">
+      <p class="section-label" style="text-align:center;">हाम्रो स्थान</p>
+      <h2 class="section-title" style="text-align:center;">हामीलाई कसरी भेट्ने</h2>
+      <div class="divider" style="margin:18px auto 48px;"></div>
+      <div class="findus-inner">
+        <div class="findus-info">
+          <p>फत्तेपुर मण्डलीमा स्वागत छ। तलको नक्सा र ठेगाना प्रयोग गरेर सजिलै हाम्रो चर्च सम्म आउन सक्नुहुन्छ।</p>
+          <div class="findus-detail">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>चर्चको ठेगाना</strong>
+              <span>फत्तेपुर मण्डली, फत्तेपुर,<br/>सप्तरी जिल्ला, नेपाल</span>
+            </div>
+          </div>
+          <div class="findus-detail">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <strong>आराधना समय</strong>
+              <span>शनिबार बिहान ८:३० बजे</span>
+            </div>
+          </div>
+          <div class="findus-detail">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <div>
+              <strong>स्थान</strong>
+              <span>फत्तेपुर, सप्तरी, नेपाल</span>
+            </div>
+          </div>
+          <a href="https://maps.app.goo.gl/kUn29cDjgsPA4jAZ6" target="_blank" rel="noopener noreferrer" class="findus-directions">
+            <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Google Maps मा दिशा पाउनुहोस्
+          </a>
+        </div>
+        <div class="findus-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.5553329973873!2d86.93385887488856!3d26.72664916806279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef1f006d02aef1%3A0x7031c65d25484add!2sFattepur%20Church!5e0!3m2!1sen!2sjp!4v1789187570608!5m2!1sen!2sjp" width="600" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="फत्तेपुर मण्डली गुगल नक्सा"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section class="yt-section" id="youtube">
+    <div class="container">
+      <div style="text-align:center; max-width:680px; margin:0 auto 56px;">
+        <p class="section-label" style="text-align:center;">हाम्रो मण्डली</p>
+        <h2 class="section-title" style="text-align:center;">फत्तेपुर मण्डलीबारे थोरै जानकारी</h2>
+        <div class="divider" style="margin:18px auto 28px;"></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; text-align:left; margin-bottom:8px;">
+          <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+            <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">स्थापना</div>
+            <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">बि.सं. २०३७ (सन् १९८०)</div>
+          </div>
+          <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+            <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">आराधना समय</div>
+            <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">शनिबार बिहान ८:३० बजे बाट</div>
+          </div>
+          <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+            <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">स्थान</div>
+            <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:16px;">फत्तेपुर, सप्तरी, नेपाल</div>
+          </div>
+          <div style="background:white; border:1px solid var(--border); border-left:3px solid var(--gold); border-radius:4px; padding:18px 20px;">
+            <div style="font-size:12px; font-weight:600; letter-spacing:.08em; color:var(--gold); margin-bottom:6px;">हामी उपलब्ध छौं</div>
+            <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--navy); font-size:15px;">Facebook / YouTube / Instagram</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="yt-inner">
+        <div class="yt-text">
+          <p class="section-label">हाम्रो च्यानल</p>
+          <h2 class="section-title">YouTube मा हेर्नुहोस्</h2>
+          <div class="divider"></div>
+          <p>
+            फत्तेपुर मण्डलीका आराधना, सन्देश र विशेष कार्यक्रमहरु
+            हाम्रो YouTube च्यानलमा हेर्न सकिन्छ। Subscribe गर्नुहोस्
+            र नयाँ भिडियोहरुको सूचना पाउनुहोस्।
+          </p>
+          <p style="font-size:14px; color:var(--gray); margin-bottom:24px; font-style:italic;">
+            "संगतिको तृष्णा" — Ps. Gambhirman Rai द्वारा सन्देश
+          </p>
+          <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" rel="noopener noreferrer" class="yt-link">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a2744"/></svg>
+            YouTube च्यानल हेर्नुहोस्
+          </a>
+        </div>
+        <div class="yt-embed">
+          <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:6px;">
+            <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" width="1030" height="579" src="https://www.youtube.com/embed/bDbBCDHMcZo" title="संगतिको तृष्णा (Desire for Fellowship) | Ps. Gambhirman Rai | Fattepur Church Nepal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section class="connect-section" id="connect">
+    <div class="container">
+      <div class="connect-grid">
+        <div class="connect-info">
+          <p class="section-label">सम्पर्क</p>
+          <h2 class="section-title">हामीसँग जोडिनुहोस्</h2>
+          <div class="divider"></div>
+          <p>
+            यदि तपाईं हाम्रो मण्डलीमा आउन चाहनुहुन्छ वा थप जानकारी लिन
+            चाहनुहुन्छ भने हामीलाई सम्पर्क गर्नुहोस्। हामी सधैँ स्वागत
+            गर्न तयार छौं।
+          </p>
+          <div class="connect-detail">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>फत्तेपुर, सप्तरी, नेपाल</span>
+          </div>
+          <div class="connect-detail">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="3"/></svg>
+            <span>शनिबार बिहान ८:३० बजे<br/>आराधना सेवा</span>
+          </div>
+          <div class="connect-detail">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>facebook.com/FattepurChurchNepal</span>
+          </div>
+          <div class="social-row">
+            <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" rel="noopener noreferrer" class="social-btn fb">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" rel="noopener noreferrer" class="social-btn yt">
+              <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+              YouTube
+            </a>
+            <a href="https://www.instagram.com/fattepurchurch/" target="_blank" rel="noopener noreferrer" class="social-btn ig">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="connect-form-wrap">
+          <h3>प्रार्थनाको विषय यहाँबाट हामीलाई पठाउनुहोस्</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="userName">तपाईंको नाम</label>
+              <input id="userName" type="text" name="user_name" placeholder="पूरा नाम लेख्नुहोस्" required/>
+            </div>
+            <div class="form-group">
+              <label for="userContact">इमेल वा फोन</label>
+              <input id="userContact" type="text" name="user_contact" placeholder="सम्पर्क नम्बर वा इमेल" required/>
+            </div>
+            <div class="form-group">
+              <label for="userMessage">सन्देश</label>
+              <textarea id="userMessage" name="message" placeholder="यहाँ आफ्नो प्रार्थनाको विषय लेख्नुहोस्..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="submit-btn">सन्देश पठाउनुहोस्</button>
+            <div id="form-status" style="margin-top:12px; font-size:14px; border-radius:4px; display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo" style="margin-bottom:16px;display:flex;">
+            <div class="logo-icon">
+              <img src="https://raw.githubusercontent.com/fattepurchurch/fattepurchurch.github.io/refs/heads/main/Logo.png" alt="Fattepur Church Logo" width="48" height="48" style="object-fit:contain;"/>
+            </div>
+            <div class="logo-text-wrap">
+              <div class="logo-ne" style="color:white;">फत्तेपुर मण्डली</div>
+              <div class="logo-en">Fattepur Church Nepal</div>
+            </div>
+          </a>
+          <p>परमेश्वरको वचन र सेवामा समर्पित। सबैलाई स्वागत छ — आउनुहोस् र परिवारको अंश बन्नुहोस्।</p>
+        </div>
+        <div class="footer-col">
+          <h4>पृष्ठहरु</h4>
+          <a href="#hero">गृहपृष्ठ</a>
+          <a href="#about">हाम्रोबारे</a>
+          <a href="#posts">सन्देशहरु</a>
+          <a href="#verses">बाइबल वचन</a>
+          <a href="#gallery">ग्यालरी</a>
+          <a href="#connect">सम्पर्क</a>
+        </div>
+        <div class="footer-col">
+          <h4>सोशल मिडिया</h4>
+          <a href="https://www.facebook.com/FattepurChurchNepal" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.youtube.com/channel/UCYni21up6WlhkewNgdg9dfg" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.instagram.com/fattepurchurch/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://fattepurchurch.blogspot.com/" target="_blank" rel="noopener noreferrer">Blogspot</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © २०८१ फत्तेपुर मण्डली, नेपाल। सर्वाधिकार सुरक्षित। &nbsp;|&nbsp; स्थापना बि.सं. २०३७
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Toggle Mobile Nav with body lock
+    function toggleMobileNav(show) {
+      const nav = document.getElementById('mobileNav');
+      if (show) {
+        nav.classList.add('open');
+        document.body.classList.add('no-scroll');
+      } else {
+        nav.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      }
     }
-    box.style.display = 'block';
-  }
 
-  document.addEventListener('click', function(e) {
-    if (!document.getElementById('siteSearch').contains(e.target)) {
-      document.getElementById('searchResults').style.display = 'none';
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        toggleMobileNav(false);
+        document.getElementById('searchResults').style.display = 'none';
+      }
+    });
+
+    // Search Database & Functionality
+    const searchData = [
+      { title: "हाम्रो स्थान", section: "#findus", text: "फत्तेपुर मण्डली ठेगाना नक्सा location map how to find us" },
+      { title: "गृहपृष्ठ", section: "#hero", text: "फत्तेपुर मण्डली, नेपाल परमेश्वरको प्रेम र सेवामा समर्पित" },
+      { title: "हाम्रोबारे", section: "#about", text: "फत्तेपुर मण्डली परिचय बि.सं. २०३७ स्थापना भाग्लपुर गाईघाट" },
+      { title: "आराधना समय", section: "#about", text: "शनिबार बिहान ८:३० बजे आराधना सेवा" },
+      { title: "बप्तिस्मा कार्यक्रम २०७९", section: "#posts", text: "निरोज मगर बिनिता राई बप्तिस्मा पुस २०७९" },
+      { title: "हितोपदेश १५:१", section: "#posts", text: "नम्र उत्तरले क्रोधलाई शान्त गर्छ soft answer wrath" },
+      { title: "मर्कूस १६:१५", section: "#posts", text: "सारा संसारमा जानुहोस् सुसमाचार gospel preach" },
+      { title: "बाइबल वचनहरु", section: "#verses", text: "१ शमूएल हिब्रू १ पत्रुस bible verse" },
+      { title: "१ शमूएल १६:७", section: "#verses", text: "परमप्रभुले मनको भित्री भाग हेर्नुहुन्छ" },
+      { title: "हिब्रू १०:२५", section: "#verses", text: "एकसाथ भेला हुन नछोडौं प्रोत्साहन" },
+      { title: "१ पत्रुस ३:९", section: "#verses", text: "खराबीको बदला खराबी नगर्ने आशिष्" },
+      { title: "फोटो ग्यालरी", section: "#gallery", text: "मण्डलीका क्षणहरु photos gallery" },
+      { title: "YouTube भिडियो", section: "#youtube", text: "संगतिको तृष्णा Ps Gambhirman Rai भिडियो" },
+      { title: "सम्पर्क", section: "#connect", text: "सम्पर्क गर्नुहोस् Facebook Instagram फत्तेपुर नेपाल" }
+    ];
+
+    function siteSearchFn() {
+      const q = document.getElementById('siteSearch').value.toLowerCase().trim();
+      const box = document.getElementById('searchResults');
+      if (!q) { 
+        box.style.display = 'none'; 
+        return; 
+      }
+      const hits = searchData.filter(d => d.title.toLowerCase().includes(q) || d.text.toLowerCase().includes(q));
+      if (!hits.length) {
+        box.innerHTML = '<div style="padding:14px 16px; color:#9ca3af; font-size:13px;">कुनै नतिजा भेटिएन।</div>';
+      } else {
+        box.innerHTML = hits.map(h => `
+          <a href="${h.section}" onclick="document.getElementById('searchResults').style.display='none'; document.getElementById('siteSearch').value='';"
+             style="display:block; padding:11px 16px; font-size:13px; color:var(--navy); text-decoration:none; border-bottom:1px solid #f0ede8;">
+            <strong style="display:block; margin-bottom:2px;">${h.title}</strong>
+            <span style="color:#9ca3af; font-size:12px;">${h.text.substring(0,60)}...</span>
+          </a>`).join('');
+      }
+      box.style.display = 'block';
     }
-  });
-</script>
 
-<script>
-  emailjs.init('0d0r2KvFf4EOBJlAB');
+    // Fixed search box click outside behavior
+    document.addEventListener('click', function(e) {
+      const searchBox = document.getElementById('siteSearch');
+      const resultsBox = document.getElementById('searchResults');
+      if (!searchBox.contains(e.target) && !resultsBox.contains(e.target)) {
+        resultsBox.style.display = 'none';
+      }
+    });
 
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    // EmailJS Contact Form with clear high-contrast alert
+    emailjs.init('0d0r2KvFf4EOBJlAB');
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
 
-    const btn = document.getElementById('submit-btn');
-    const status = document.getElementById('form-status');
+      btn.textContent = 'पठाउँदैछ...';
+      btn.disabled = true;
+      status.style.display = 'none';
+      status.textContent = '';
 
-    // Sending state
-    btn.textContent = 'पठाउँदैछ...';
-    btn.disabled = true;
-    status.style.display = 'none';
-    status.textContent = '';
+      emailjs.sendForm('service_zliffjq', 'template_giwkgxj', '#contact-form')
+        .then(function() {
+          status.textContent = 'तपाईंको प्रार्थनाको विषय सफलतापूर्वक पठाइयो! धन्यवाद।';
+          status.style.cssText = 'margin-top:14px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(34,197,94,0.15); color:#86efac; border:1px solid #22c55e; display:block;';
+          document.getElementById('contact-form').reset();
+          btn.textContent = 'सन्देश पठाउनुहोस्';
+          btn.disabled = false;
+        }, function() {
+          status.textContent = 'सन्देश पठाउन सकिएन, कृपया पुनः प्रयास गर्नुहोस्।';
+          status.style.cssText = 'margin-top:14px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(239,68,68,0.2); color:#fca5a5; border:1px solid #ef4444; display:block;';
+          btn.textContent = 'सन्देश पठाउनुहोस्';
+          btn.disabled = false;
+        });
+    });
 
-    emailjs.sendForm('service_zliffjq', 'template_giwkgxj', '#contact-form')
-      .then(function() {
-        status.textContent = 'तपाईंको प्रार्थनाको विषय सफलतापूर्वक पठाइयो! धन्यवाद।';
-        status.style.cssText = 'margin-top:12px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(196,154,42,.15); color:#7a5c00; border:1px solid var(--gold); display:block;';
-        document.getElementById('contact-form').reset();
-        btn.textContent = 'सन्देश पठाउनुहोस्';
-        btn.disabled = false;
-      }, function() {
-        status.textContent = 'सन्देश पठाउन सकिएन, कृपया पुनः प्रयास गर्नुहोस्।';
-        status.style.cssText = 'margin-top:12px; font-size:14px; border-radius:4px; padding:12px 16px; background:rgba(220,38,38,.1); color:#b91c1c; border:1px solid #fca5a5; display:block;';
-        btn.textContent = 'सन्देश पठाउनुहोस्';
-        btn.disabled = false;
-      });
-  });
-</script>
-</body>
+  </script>
 </body>
 </html>
